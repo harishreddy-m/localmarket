@@ -36,14 +36,14 @@ That's it!  You should be able to access your application at:
 If your app requires a specific version of Node.js, just update the 'engines' section of your app's `package.json` file to specify your runtime requirements:
 
     "engines": {
-        "node": ">= 0.10.0",
+        "node": ">= 0.12.0",
         "npm": ">= 1.0.0"
      },
 
 Commit your changes locally:
 
     git add package.json
-    git commit -m 'updating package.json to select Node.js version 0.8.21'
+    git commit -m 'updating package.json to select Node.js version 0.10.38'
 
 Then push your updates to OpenShift
 
