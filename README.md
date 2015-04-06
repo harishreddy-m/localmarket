@@ -36,8 +36,7 @@ That's it!  You should be able to access your application at:
 If your app requires a specific version of Node.js, just update the 'engines' section of your app's `package.json` file to specify your runtime requirements:
 
     "engines": {
-        "node": ">= 0.12.0",
-        "npm": ">= 1.0.0"
+        "node": ">= 0.12.0"
      },
 
 Commit your changes locally:
