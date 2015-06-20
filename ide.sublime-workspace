@@ -1,0 +1,393 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"para",
+				"params"
+			],
+			[
+				"ch",
+				"charCode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 325.0,
+		"last_filter": "set syntax:j",
+		"selected_items":
+		[
+			[
+				"set syntax:j",
+				"Set Syntax: JSON"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 549.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/hobbyWorkspace/localmarket"
+	],
+	"file_history":
+	[
+		"/D/hobbyWorkspace/localmarket/package.json",
+		"/D/hobbyWorkspace/localmarket/index.html",
+		"/D/hobbyWorkspace/localmarket/server.js",
+		"/D/workspace/bi_5.3.1.66664/src/main/resources/3clogicReports/en/athenadatasource/schema.xml",
+		"/D/patches/testDS.patch",
+		"/D/patches/dashboard.min.js.patch",
+		"/D/patches/DStimestamp.patch",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/static/dashboard_gen.html",
+		"/C/Users/3clogic/workspace/rs/biserver-ce/pentaho-solutions/system/ccclogic-plugin/resources/script/locales/en/translation.json",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/conf/context.xml",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/WEB-INF/war-version.xml",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ms/WEB-INF/war-version.xml",
+		"/C/Users/3clogic/workspace/rs/biserver-ce/tomcat/webapps/athena/WEB-INF/war-version.xml",
+		"/C/Users/3clogic/workspace/rs/bireport/src/main/resources/3clogicReports/en/athenadatasource/schema.xml",
+		"/C/Users/3clogic/Documents/webdep.xml",
+		"/C/Users/3clogic/workspace/cdrSummarizer/pom.xml",
+		"/C/Users/3clogic/Downloads/CyberReceipt1434309067055.txt",
+		"/C/Users/3clogic/workspace/cdrSummarizer/.docker/DockerFile.txt",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/solrprod_solution.txt",
+		"/C/Users/3clogic/Documents/metadep.xml",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/gopeshwebrtc.html",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/crm_logs.txt",
+		"/D/workspace/widgets/js/phone.min.js",
+		"/C/Users/3clogic/workspace/mail-gateway/pom.xml",
+		"/D/patches/5.4/chatrehar.patch",
+		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.5.0/5.5.0.043.xml",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/ds05-production.txt",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/RELEASE-NOTES.txt",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/fujitsu.html",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/chatLocal.html",
+		"/C/Users/3clogic/Desktop/fujitsu.html",
+		"/C/Users/3clogic/Desktop/callLocal.html",
+		"/C/Users/3clogic/Desktop/chatLocal.html",
+		"/D/workspace/widgets/js/chat.js",
+		"/C/ProgramData/3CLogic/Users/NODENEW/Configuration/1_localhost;8080;cs;ws;config;ccid=33.xml",
+		"/C/Users/3clogic/Downloads/1_https;;;svr05-replica.3ccloud.com;cs;ws;config;ccid=1460.xml",
+		"/C/Users/3clogic/Desktop/assignConfig.xml",
+		"/C/ProgramData/3CLogic/Users/NODENEW/Configuration/2_localhost;8080;cs;ws;config;ccid=33.xml",
+		"/C/Program Files (x86)/3CLogic/Common/3CLogicNodeAdmin.exe.config",
+		"/E/secrets/instances for bigdata.txt",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/index.html",
+		"/C/Users/3clogic/workspace/ls_trunk/src/test/resources/obelyx-deployment.properties",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/callChatLocal.html",
+		"/C/ProgramData/3CLogic/Users/NODE/Configuration/1_localhost;8080;cs;ws;config;ccid=7.xml",
+		"/C/Users/3clogic/Downloads/1_https;;;svr05-replica.3ccloud.com;cs;ws;config;ccid=1460 (1).xml",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/partials/dialPlan.html",
+		"/D/patches/5.5/automate",
+		"/C/Users/3clogic/Desktop/DefaultConfiguration.config",
+		"/D/workspace/ms_5.3.1.66794/src/main/resources/ms-lead.xml",
+		"/D/workspace/ms_5.3.1.66794/src/main/resources/liquibase/liquibase.xml",
+		"/D/workspace/ms_5.3.1.66794/pom.xml",
+		"/C/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/ccam/include/conf.inc.php",
+		"/C/Users/3clogic/workspace/webastrams_2_solr/build.xml",
+		"/C/Program Files (x86)/3CLogic/Common/DefaultConfiguration.config",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/Marumeni.html",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/widgets/js/chat.js",
+		"/D/workspace/widgets/js/phone.js",
+		"/C/Users/3clogic/Desktop/chat.js",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/es/WEB-INF/classes/log4j2.xml",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/js/app/controllers/dialPlanController.js",
+		"/C/ProgramData/3CLogic/Users/agent/Configuration/1_localhost;8080;cs;ws;config;ccid=7.xml",
+		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.6.0/5.6.0.001.xml",
+		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.013.xml",
+		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.012.xml",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/partials/callcenters.html",
+		"/C/Users/3clogic/AppData/Local/Temp/Temp1_ngwidgets-ver1.0.0.zip/demos/sampledata/beverages.txt",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/js/app/controllers/callcenterController.js",
+		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.015.xml",
+		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.005.xml",
+		"/C/Users/3clogic/Desktop/dialPlan.html",
+		"/C/Users/3clogic/Desktop/dialPlanController.js",
+		"/D/workspace/cs_4.6.1.59383/build.xml",
+		"/D/workspace/cs_4.6.1.59383/build.properties",
+		"/C/Users/3clogic/workspace/crm_trunk/src/main/resources/cassandra.xml",
+		"/C/Users/3clogic/Documents/garbage",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/ChatWebrtc.html",
+		"/C/Users/3clogic/Documents/callChatLocal.html",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/Marumeni.html",
+		"/C/Users/3clogic/Desktop/web.xml",
+		"/C/Users/3clogic/Desktop/server.xml",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/conf/server.xml",
+		"/C/Users/3clogic/Desktop/shardingSQLchanges.sql",
+		"/C/Users/3clogic/workspace/webastrams_2_solr/war/WEB-INF/solr.properties",
+		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/schema (2).xml",
+		"/D/workspace/ls_angular/src/main/webapp/Gruntfile.js",
+		"/D/workspace/ls_angular/src/main/webapp/index.html",
+		"/D/workspace/ls_angular/src/main/webapp/install.txt",
+		"/D/workspace/cs_4.6/build.properties",
+		"/D/patches/cs46Solr.patch",
+		"/C/Users/3clogic/workspace/webastrams/war/WEB-INF/ms-log.xml",
+		"/C/Users/3clogic/workspace/webastrams/war/WEB-INF/ms-data.xml",
+		"/C/Users/3clogic/workspace/webastrams/war/WEB-INF/ms-servlet.xml",
+		"/C/Users/3clogic/workspace/webastrams/war/WEB-INF/ms-transaction.xml",
+		"/C/Users/3clogic/workspace/webastrams/war/WEB-INF/conf/quartz.properties",
+		"/D/workspace/ls_angular/src/main/webapp/.bowerrc",
+		"/D/workspace/ls_angular/src/main/webapp/index2.html",
+		"/C/Users/3clogic/Desktop/shardingSQLchanges",
+		"/C/Users/3clogic/workspace/webastrams_solr/build.properties",
+		"/C/Users/3clogic/Desktop/redis-amazon.txt",
+		"/C/Users/3clogic/Desktop/unittests",
+		"/D/solr-5.0.0/server/solr/solr.xml",
+		"/D/solr-5.0.0/server/solr/3clogic/conf/solr-data-config.xml",
+		"/D/solr-5.0.0/server/solr/3clogic/conf/solrconfig.xml",
+		"/D/solr_oldbkp/cc_7/conf/solrconfig.xml",
+		"/D/solr_oldbkp/solr.xml",
+		"/D/solr-5.0.0/example/schemaless/solr/gettingstarted/conf/solrconfig.xml",
+		"/D/solr-5.0.0/example/schemaless/solr/gettingstarted/conf/data-config",
+		"/D/solr-5.0.0/server/solr/cc_7/conf/data-config.xml",
+		"/D/solr-5.0.0/server/solr/cc_7/conf/schema.xml",
+		"/D/solr-5.0.0/server/solr/cc_7/conf/solrconfig.xml",
+		"/D/solr-5.0.0/server/solr/3clogic/conf/schema.xml",
+		"/D/solr-5.0.0/server/solr/configsets/basic_configs/conf/schema.xml",
+		"/D/solr_data/cc_7/conf/dataimport.properties",
+		"/D/solr_data/cc_7/conf/solrconfig.xml",
+		"/D/solr_data/cc_7/conf/schema.xml",
+		"/D/solr_data/cc_7/conf/data-config.xml",
+		"/D/workspace/widgets/js/SIPml-api.js",
+		"/D/solr_data/README.txt",
+		"/C/Users/3clogic/AppData/Local/Temp/Temp1_solr-4.1.0.zip/solr-4.1.0/example/example-DIH/solr/solr/conf/solrconfig.xml",
+		"/C/Users/3clogic/Desktop/chatCallDemo.html",
+		"/C/Users/3clogic/Desktop/tds cut per month.txt",
+		"/D/solr-5.0.0/server/solr/configsets/basic_configs/conf/solrconfig.xml",
+		"/C/Users/3clogic/workspace/ls_trunk/src/main/webapp/index2.html",
+		"/C/Users/3clogic/workspace/ls_trunk/src/main/webapp/new/app.js",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/conf/catalina.properties",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/call.html",
+		"/C/Users/3clogic/workspace/rs/pentaho/birplugin/package-res/resources/bir.html",
+		"/C/Users/3clogic/workspace/rs/pentaho/birplugin/package-res/resources/cdr.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"factory=\"org.apache.commons.dbcp.BasicDataSourceFactory\"",
+			"cccl0g1c",
+			"formatString=\"#0.00%\"",
+			"Total Calls",
+			"Total calls",
+			"total calls",
+			"total call",
+			"totalcallstoagent",
+			"calcul",
+			"\"guid\"",
+			"\"\\n\"guid",
+			"\"\\n",
+			"wsadd",
+			"localc",
+			"India",
+			"secondoutline",
+			"first",
+			"asd",
+			"asdasd",
+			"source",
+			"guid",
+			"if (direction === \"incoming\") {\n				if ($(message).text() !== \"\") {",
+			"bucket",
+			"remote",
+			"//",
+			"if (direction === \"incoming\") {\n				if ($(message).text() !== \"\") {",
+			"security",
+			"8443",
+			"8080",
+			"cccua.",
+			"cccua.ua",
+			"start",
+			"invite",
+			"crmSyncFastJobTrigger",
+			"callcenterf",
+			"ds",
+			"nodeconfig",
+			"lib",
+			"lib>",
+			"lib",
+			"`",
+			"`,",
+			"index",
+			"solr-data",
+			"text",
+			"QueryElevationComponent",
+			"uuid",
+			"`",
+			"<lib>",
+			"factory=\"org.apache.commons.dbcp.BasicDataSourceFactory\"",
+			"<updateRequestProcessorChain name=\"add-unknown-fields-to-the-schema\">",
+			"  <schemaFactory class=\"ClassicIndexSchemaFactory\"/>",
+			"     <schemaFactory class=\"ClassicIndexSchemaFactory\"/>",
+			"<str name=\"managedSchemaResourceName\">managed-schema</str>",
+			"ManagedIndexSchemaFactory",
+			"#",
+			".dtmf",
+			"getLangCookie",
+			"roles",
+			"export",
+			"export ",
+			".dtmf",
+			"this.o_session.dtmf",
+			"this.o_session.",
+			"this.o_session._dtmf",
+			"String",
+			"jdk",
+			"java",
+			"″/>",
+			"”"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"root"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ide.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"package.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
