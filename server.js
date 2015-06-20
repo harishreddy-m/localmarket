@@ -1,18 +1,10 @@
-var restify = require('restify');
 
-var server = restify.createServer({
-  name: 'local-market',
-  version: '1.0.0'
-});
-server.use(restify.acceptParser(server.acceptable));
-server.use(restify.queryParser());
-server.use(restify.bodyParser());
+var express = require('express');
+var app = express();
 
-server.get('/echo/:name', function (req, res, next) {
-  res.send(req.params);
-  return next();
+app.get('/hello/:name', function(req, res){
+  res.send('hello ' + req.params.name);
 });
 
-server.listen(8080, function () {
-  console.log('%s listening at %s', server.name, server.url);
-});
+app.listen(process.env.OPENSHIFT_INTERNAL_PORT);
+console.log('Listening on port ' + process.env.OPENSHIFT_INTERNAL_PORT);
