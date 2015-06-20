@@ -1,30 +1,18 @@
-//var cc          = require('config-multipaas'),
-  var  restify     = require('restify'),
-    	fs          = require('fs')
+var restify = require('restify');
 
-//var config      = cc(),
- var   app         = restify.createServer()
+var server = restify.createServer({
+  name: 'local-market',
+  version: '1.0.0'
+});
+server.use(restify.acceptParser(server.acceptable));
+server.use(restify.queryParser());
+server.use(restify.bodyParser());
 
-app.use(restify.queryParser())
-app.use(restify.CORS())
-app.use(restify.fullResponse())
-
-// Routes
-app.get('/status', function (req, res, next)
-{
-  res.send("{status: 'ok'}");
+server.get('/echo/:name', function (req, res, next) {
+  res.send(req.params);
+  return next();
 });
 
-app.get('/', function (req, res, next)
-{
-  var data = fs.readFileSync(__dirname + '/index.html');
-  res.status(200);
-  res.header('Content-Type', 'text/html');
-  res.end(data.toString().replace(/host:port/g, req.header('Host')));
-});
-
-app.get(/\/(css|js|img)\/?.*/, restify.serveStatic({directory: './static/'}));
-
-app.listen(process.env.OPENSHIFT_INTERNAL_PORT, process.env.OPENSHIFT_INTERNAL_IP, function () {
-  console.log( "Listening on " + process.env.OPENSHIFT_INTERNAL_IP + ", port " + process.env.OPENSHIFT_INTERNAL_PORT )
+server.listen(8080, function () {
+  console.log('%s listening at %s', server.name, server.url);
 });
