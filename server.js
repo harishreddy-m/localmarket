@@ -1,9 +1,9 @@
-var cc          = require('config-multipaas'),
-    restify     = require('restify'),
-    fs          = require('fs')
+//var cc          = require('config-multipaas'),
+  var  restify     = require('restify'),
+    	fs          = require('fs')
 
-var config      = cc(),
-    app         = restify.createServer()
+//var config      = cc(),
+ var   app         = restify.createServer()
 
 app.use(restify.queryParser())
 app.use(restify.CORS())
@@ -25,6 +25,6 @@ app.get('/', function (req, res, next)
 
 app.get(/\/(css|js|img)\/?.*/, restify.serveStatic({directory: './static/'}));
 
-app.listen(config.get('PORT'), config.get('IP'), function () {
-  console.log( "Listening on " + config.get('IP') + ", port " + config.get('PORT') )
+app.listen(process.env.OPENSHIFT_INTERNAL_PORT, process.env.OPENSHIFT_INTERNAL_IP, function () {
+  console.log( "Listening on " + process.env.OPENSHIFT_INTERNAL_IP + ", port " + process.env.OPENSHIFT_INTERNAL_PORT )
 });

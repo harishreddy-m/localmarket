@@ -23,10 +23,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 325.0,
-		"last_filter": "set syntax:j",
+		"height": 490.0,
+		"last_filter": "in",
 		"selected_items":
 		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
 			[
 				"set syntax:j",
 				"Set Syntax: JSON"
@@ -200,7 +204,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 117.0,
 		"where_history":
 		[
 		]
@@ -310,7 +314,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"layout":
 	{
