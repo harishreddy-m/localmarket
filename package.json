@@ -1,6 +1,6 @@
 {
-	"name": "node-express-mongodb-login-registration",
-	"description": "Simple login registration app using express & mongodb",
+	"name": "Dumas",
+	"description": "app using express & mongodb",
 	"version": "0.0.1",
 	"private": "true",
 	"dependencies": {
