@@ -11,7 +11,6 @@
 		"mongoose": "3.4.x",
         "jade": ">= 0.0.1",
         "connect-redis":"2.3.0",
-        "config":"*",
-        "redis":"*"
+        "config":"*"
 	}
 }
