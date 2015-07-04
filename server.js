@@ -19,9 +19,7 @@ var express = require("express"),
    
 var config = require('config');
 var dbConfig = process.env.OPENSHIFT_MONGODB_DB_URL || config.get('App.dbConfig');
-var  RedisStore = require ( 'connect-redis' ) ( session ),
-    sessionStore = new RedisStore ({host:process.env.OPENSHIFT_REDIS_DB_HOST|| config.get('App.redisHost'),port:process.env.OPENSHIFT_REDIS_DB_PORT|| config.get('App.redisPort')});
-
+var  MongoStore = require ( 'connect-mongo' ) ( session );
 
 /*
  * UserSchema
@@ -33,6 +31,10 @@ UserSchema = new mongoose.Schema({
     email:'string'
 });
 
+
+var db = mongoose.createConnection(dbConfig),
+    User = db.model('users', UserSchema);
+
 app.configure(function () {
     app.use(express.logger());
     app.use(express.bodyParser());
@@ -40,7 +42,7 @@ app.configure(function () {
 
     app.use(express.cookieParser());
     app.use(express.session(
-        {secret:"secret key", store:sessionStore,key:"dumas.users.active"}));
+        {secret:"secret key", store:new MongoStore({mongooseConnection: db})}));
     app.use(express.static(__dirname + '/app'));
 
     app.engine('html', engines.underscore);
@@ -60,8 +62,6 @@ app.configure(function () {
  * MongoDB connection using Mongoose
  */
 
-var db = mongoose.createConnection(dbConfig),
-    User = db.model('users', UserSchema);
 
 db.on('connected', function () {
     console.log('Connection success database MongoDB.');

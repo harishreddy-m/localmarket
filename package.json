@@ -10,7 +10,7 @@
 		"underscore": "1.4.x",
 		"mongoose": "3.4.x",
         "jade": ">= 0.0.1",
-        "connect-redis":"2.3.0",
+        "connect-mongo":"0.8.1",
         "config":"*"
 	}
 }

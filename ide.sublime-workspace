@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
+				"db",
+				"dbConfig"
+			],
+			[
 				"se",
 				"sessionStore"
 			],
@@ -23,7 +31,15 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 4606,
+				"buffer_size": 4466,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/default.json",
+			"settings":
+			{
+				"buffer_size": 140,
 				"line_ending": "Windows"
 			}
 		},
@@ -31,7 +47,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 373,
+				"buffer_size": 335,
 				"line_ending": "Windows"
 			}
 		}
@@ -44,9 +60,13 @@
 	"command_palette":
 	{
 		"height": 490.0,
-		"last_filter": "",
+		"last_filter": "va",
 		"selected_items":
 		[
+			[
+				"va",
+				"Pretty JSON: Validate"
+			],
 			[
 				"in",
 				"Package Control: Install Package"
@@ -85,10 +105,23 @@
 	},
 	"expanded_folders":
 	[
-		"/D/hobbyWorkspace/localmarket"
+		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks",
+		"/D/hobbyWorkspace/localmarket/.openshift/cron",
+		"/D/hobbyWorkspace/localmarket/.openshift/lib",
+		"/D/hobbyWorkspace/localmarket/.openshift/markers",
+		"/D/hobbyWorkspace/localmarket/app",
+		"/D/hobbyWorkspace/localmarket/config"
 	],
 	"file_history":
 	[
+		"/D/hobbyWorkspace/localmarket/config/openshift.json",
+		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/pre_start_nodejs",
+		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/pre_build",
+		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/build",
+		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/deploy",
+		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/post_deploy",
+		"/D/hobbyWorkspace/localmarket/package.json",
+		"/D/hobbyWorkspace/localmarket/config/default.json",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/js/alert_popup.js",
 		"/C/Users/3clogic/workspace/ds-maven/src/main/webapp/js/lib/minified/dashboard.renderer.min.js",
 		"/D/hobbyWorkspace/localmarket/server.js",
@@ -98,7 +131,6 @@
 		"/C/Users/3clogic/Desktop/DefaultConfiguration.config",
 		"/C/Users/3clogic/workspace/rs/bootstrapRS.js",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/static/dashboard_gen.html",
-		"/D/hobbyWorkspace/localmarket/package.json",
 		"/D/workspace/bi-server/bootstrapRS.js",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/logs/localhost_access_log.2015-06-24.txt",
 		"/D/hobbyWorkspace/localmarket/index.html",
@@ -209,14 +241,7 @@
 		"/D/solr-5.0.0/server/solr/3clogic/conf/schema.xml",
 		"/D/solr-5.0.0/server/solr/configsets/basic_configs/conf/schema.xml",
 		"/D/solr_data/cc_7/conf/dataimport.properties",
-		"/D/solr_data/cc_7/conf/solrconfig.xml",
-		"/D/solr_data/cc_7/conf/schema.xml",
-		"/D/solr_data/cc_7/conf/data-config.xml",
-		"/D/workspace/widgets/js/SIPml-api.js",
-		"/D/solr_data/README.txt",
-		"/C/Users/3clogic/AppData/Local/Temp/Temp1_solr-4.1.0.zip/solr-4.1.0/example/example-DIH/solr/solr/conf/solrconfig.xml",
-		"/C/Users/3clogic/Desktop/chatCallDemo.html",
-		"/C/Users/3clogic/Desktop/tds cut per month.txt"
+		"/D/solr_data/cc_7/conf/solrconfig.xml"
 	],
 	"find":
 	{
@@ -324,7 +349,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -333,15 +358,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4606,
+						"buffer_size": 4466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								749,
+								749
 							]
 						],
 						"settings":
@@ -349,7 +374,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 79.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -357,25 +382,52 @@
 				},
 				{
 					"buffer": 1,
-					"file": "package.json",
+					"file": "config/default.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 373,
+						"buffer_size": 140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								231,
-								231
+								133,
+								133
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
