@@ -1,0 +1,6 @@
+{
+  "App": {
+    "dbConfig": "mongodb://localhost/dumas/users",
+    "Port":"3000"
+  }
+}

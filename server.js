@@ -20,7 +20,7 @@ var express = require("express"),
     sessionStore = new RedisStore ();
 
 var config = require('config');
-var dbConfig = config.get('App.dbConfig');
+var dbConfig = OPENSHIFT_MONGODB_DB_URL || config.get('App.dbConfig');
 
 /*
  * UserSchema
@@ -49,7 +49,7 @@ app.configure(function () {
      */
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'html');
-    app.set('PORT', config.get("App.Port"));
+    app.set('PORT',process.env.OPENSHIFT_NODEJS_PORT || config.get("App.Port"));
 
     
 
