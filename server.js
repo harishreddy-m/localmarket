@@ -158,7 +158,13 @@ app.get('/logout', function (req, res) {
         message:''});
 });
 
-app.listen(app.get('PORT'),app.get('PORT'));
-console.log('Node-Express-MongoDB Login Registration App');
+app.listen(app.get('PORT'),app.get('PORT'),function(){
+
+
+console.log('Node-Express-MongoDB Dumas App');
 console.log('-------------------------------------------');
 console.log("Server Port: " + app.get('PORT'));
+console.log("Server Port: " + app.get('IP'));
+
+
+});
