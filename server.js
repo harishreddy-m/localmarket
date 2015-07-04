@@ -50,7 +50,7 @@ app.configure(function () {
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'html');
     app.set('PORT',process.env.OPENSHIFT_NODEJS_PORT || config.get("App.Port"));
-
+    app.set('IP',process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
     
 
 });
@@ -158,7 +158,7 @@ app.get('/logout', function (req, res) {
         message:''});
 });
 
-app.listen(app.get('PORT'));
+app.listen(app.get('PORT'),app.get('PORT'));
 console.log('Node-Express-MongoDB Login Registration App');
 console.log('-------------------------------------------');
 console.log("Server Port: " + app.get('PORT'));
