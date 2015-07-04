@@ -20,7 +20,7 @@ var express = require("express"),
     sessionStore = new RedisStore ();
 
 var config = require('config');
-var dbConfig = OPENSHIFT_MONGODB_DB_URL || config.get('App.dbConfig');
+var dbConfig = process.env.OPENSHIFT_MONGODB_DB_URL || config.get('App.dbConfig');
 
 /*
  * UserSchema
