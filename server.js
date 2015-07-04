@@ -19,8 +19,10 @@ var express = require("express"),
    
 var config = require('config');
 var dbConfig = process.env.OPENSHIFT_MONGODB_DB_URL || config.get('App.dbConfig');
+var redis = require("redis"),
+        client = redis.createClient(process.env.OPENSHIFT_REDIS_DB_PORT|| config.get('App.redisPort'),process.env.OPENSHIFT_REDIS_DB_HOST|| config.get('App.redisHost'));
 var  RedisStore = require ( 'connect-redis' ) ( session ),
-    sessionStore = new RedisStore ({host:process.env.OPENSHIFT_REDIS_HOST|| config.get('App.redisHost'),port:process.env.OPENSHIFT_REDIS_PORT|| config.get('App.redisPort')});
+    sessionStore = new RedisStore (client);
 
 
 /*
