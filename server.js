@@ -15,12 +15,13 @@ var express = require("express"),
     app = express(),
     mongoose = require('mongoose'),
     dbmessage = '',
-    apptitle = 'Dumas',
-    RedisStore = require ( 'connect-redis' ) ( session ),
-    sessionStore = new RedisStore ();
-
+    apptitle = 'Dumas';
+   
 var config = require('config');
 var dbConfig = process.env.OPENSHIFT_MONGODB_DB_URL || config.get('App.dbConfig');
+var  RedisStore = require ( 'connect-redis' ) ( session ),
+    sessionStore = new RedisStore ({host:process.env.OPENSHIFT_REDIS_HOST|| config.get('App.redisHost'),port:process.env.OPENSHIFT_REDIS_PORT|| config.get('App.redisPort')});
+
 
 /*
  * UserSchema
@@ -63,13 +64,13 @@ var db = mongoose.createConnection(dbConfig),
     User = db.model('users', UserSchema);
 
 db.on('connected', function () {
-    console.log('Aplikasi terhubung dengan database MongoDB.');
-    dbmessage = 'Aplikasi terhubung dengan database MongoDB.';
+    console.log('Connection success database MongoDB.');
+    dbmessage = 'Connection success database MongoDB. database MongoDB.';
 });
 
 db.on('error', function () {
     console.error.bind(console, 'Connection error!');
-    dbmessage = 'Koneksi ke MongoDB error!';
+    dbmessage = 'MongoDB error!';
 });
 
 app.get("/", function (req, res) {
