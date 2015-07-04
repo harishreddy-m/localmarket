@@ -15,6 +15,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 420,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -24,7 +32,7 @@
 	"command_palette":
 	{
 		"height": 490.0,
-		"last_filter": "in",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -44,7 +52,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 549.0
+		"width": 912.0
 	},
 	"console":
 	{
@@ -69,16 +77,24 @@
 	],
 	"file_history":
 	[
-		"/D/hobbyWorkspace/localmarket/package.json",
-		"/D/hobbyWorkspace/localmarket/index.html",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/js/alert_popup.js",
+		"/C/Users/3clogic/workspace/ds-maven/src/main/webapp/js/lib/minified/dashboard.renderer.min.js",
 		"/D/hobbyWorkspace/localmarket/server.js",
+		"/C/Users/3clogic/AppData/Local/Temp/Temp1___jquery.tablesorter.zip/jquery.tablesorter.js",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/js/lib/minified/dashboard.renderer.min.js",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/conf/context.xml",
+		"/C/Users/3clogic/Desktop/DefaultConfiguration.config",
+		"/C/Users/3clogic/workspace/rs/bootstrapRS.js",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/static/dashboard_gen.html",
+		"/D/hobbyWorkspace/localmarket/package.json",
+		"/D/workspace/bi-server/bootstrapRS.js",
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/logs/localhost_access_log.2015-06-24.txt",
+		"/D/hobbyWorkspace/localmarket/index.html",
 		"/D/workspace/bi_5.3.1.66664/src/main/resources/3clogicReports/en/athenadatasource/schema.xml",
 		"/D/patches/testDS.patch",
 		"/D/patches/dashboard.min.js.patch",
 		"/D/patches/DStimestamp.patch",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/static/dashboard_gen.html",
 		"/C/Users/3clogic/workspace/rs/biserver-ce/pentaho-solutions/system/ccclogic-plugin/resources/script/locales/en/translation.json",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/conf/context.xml",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ds/WEB-INF/war-version.xml",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ms/WEB-INF/war-version.xml",
 		"/C/Users/3clogic/workspace/rs/biserver-ce/tomcat/webapps/athena/WEB-INF/war-version.xml",
@@ -116,7 +132,6 @@
 		"/C/Users/3clogic/Downloads/1_https;;;svr05-replica.3ccloud.com;cs;ws;config;ccid=1460 (1).xml",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/partials/dialPlan.html",
 		"/D/patches/5.5/automate",
-		"/C/Users/3clogic/Desktop/DefaultConfiguration.config",
 		"/D/workspace/ms_5.3.1.66794/src/main/resources/ms-lead.xml",
 		"/D/workspace/ms_5.3.1.66794/src/main/resources/liquibase/liquibase.xml",
 		"/D/workspace/ms_5.3.1.66794/pom.xml",
@@ -189,18 +204,11 @@
 		"/D/solr_data/README.txt",
 		"/C/Users/3clogic/AppData/Local/Temp/Temp1_solr-4.1.0.zip/solr-4.1.0/example/example-DIH/solr/solr/conf/solrconfig.xml",
 		"/C/Users/3clogic/Desktop/chatCallDemo.html",
-		"/C/Users/3clogic/Desktop/tds cut per month.txt",
-		"/D/solr-5.0.0/server/solr/configsets/basic_configs/conf/solrconfig.xml",
-		"/C/Users/3clogic/workspace/ls_trunk/src/main/webapp/index2.html",
-		"/C/Users/3clogic/workspace/ls_trunk/src/main/webapp/new/app.js",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/conf/catalina.properties",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/call.html",
-		"/C/Users/3clogic/workspace/rs/pentaho/birplugin/package-res/resources/bir.html",
-		"/C/Users/3clogic/workspace/rs/pentaho/birplugin/package-res/resources/cdr.html"
+		"/C/Users/3clogic/Desktop/tds cut per month.txt"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -214,6 +222,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"scroller",
 			"factory=\"org.apache.commons.dbcp.BasicDataSourceFactory\"",
 			"cccl0g1c",
 			"formatString=\"#0.00%\"",
@@ -303,8 +312,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
