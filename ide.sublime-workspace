@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"sessionStore"
+			],
+			[
 				"para",
 				"params"
 			],
@@ -19,7 +23,15 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 420,
+				"buffer_size": 4606,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 373,
 				"line_ending": "Windows"
 			}
 		}
@@ -312,7 +324,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -321,20 +333,49 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 420,
+						"buffer_size": 4606,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								420,
-								420
+								482,
+								482
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								231
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
