@@ -18,7 +18,7 @@ var express = require("express"),
     apptitle = 'Dumas';
    
 var config = require('config');
-var dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbConfig.password')+"@"+process.env.OPENSHIFT_MONGODB_DB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT+"/"+apptitle || config.get('App.dbConfig');
+var dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbConfig.password')+"@"+process.env.OPENSHIFT_MONGODB_DB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT || config.get('App.dbConfig');
 var  MongoStore = require ( 'connect-mongo' ) ( session );
 console.log(dbConfig);
 /*
