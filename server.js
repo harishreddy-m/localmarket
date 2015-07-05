@@ -18,7 +18,13 @@ var express = require("express"),
     apptitle = 'Dumas';
    
 var config = require('config');
-var dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbConfig.password')+"@"+process.env.OPENSHIFT_MONGODB_DB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT+"/localmarket" || config.get('App.dbConfig');
+var dbConfig; 
+if(!process.env.OPENSHIFT_MONGODB_DB_HOST)
+{
+dbConfig = config.get('App.dbConfig.url');
+}else{
+dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbConfig.password')+"@"+process.env.OPENSHIFT_MONGODB_DB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT+"/localmarket";
+}
 var  MongoStore = require ( 'connect-mongo' ) ( session );
 console.log(dbConfig);
 /*

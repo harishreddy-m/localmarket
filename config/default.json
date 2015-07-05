@@ -1,6 +1,6 @@
 {
   "App": {
-    "dbConfig": "mongodb://localhost/dumas/users",
+    "dbConfig":{"url":"mongodb://localhost/localmarket"},
     "Port":"3000",
     "redisHost":"127.0.0.1",
     "redisPort":"6379"
