@@ -1,5 +1,6 @@
 {
   "App": {
+  	  "title":"Offerings",
       "dbConfig": {"user":"admin","password":"LEuYIrY6VRwy"},
       "Port":"3000"
   }

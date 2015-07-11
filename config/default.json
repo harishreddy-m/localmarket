@@ -1,8 +1,7 @@
 {
   "App": {
+  	"title":"Offerings",
     "dbConfig":{"url":"mongodb://localhost/localmarket"},
-    "Port":"3000",
-    "redisHost":"127.0.0.1",
-    "redisPort":"6379"
+    "Port":"3000"
   }
 }

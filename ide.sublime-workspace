@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"connection"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"app",
+				"apptitle"
+			],
+			[
 				"Mongo",
 				"MongoStore"
 			],
@@ -32,49 +48,77 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/index.html",
+			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 1944,
+				"buffer_size": 3101,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/user/registration.html",
+			"file": "config/production.json",
 			"settings":
 			{
-				"buffer_size": 3122,
+				"buffer_size": 126,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "[SideBarGit@SublimeText localmarket/] git add -- .\n\n# Improve this command, the output or the tab title by posting here:\n# http://www.sublimetext.com/forum/viewtopic.php?f=5&t=3405\n# Tip: F5 will run the command again and refresh the contents of this tab\n\nwarning: LF will be replaced by CRLF in ide.sublime-workspace.\nThe file will have its original line endings in your working directory.\nwarning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',\nwhose behaviour will change in Git 2.0 with respect to paths you removed.\nPaths like 'index.html' that are\nremoved from your working tree are ignored with this version of Git.\n\n* 'git add --ignore-removal <pathspec>', which is the current default,\n  ignores paths you removed from your working tree.\n\n* 'git add --all <pathspec>' will let you also record the removals.\n\nRun 'git status' to check the paths you removed from your working tree.",
+			"file": "src/views/user/home.html",
 			"settings":
 			{
-				"buffer_size": 908,
-				"line_ending": "Windows",
-				"name": "No Title",
-				"scratch": true
+				"buffer_size": 824,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "[SideBarGit@SublimeText] \n[master 91057c3] Changed password\n 3 files changed, 26 insertions(+), 137 deletions(-)\n delete mode 100644 index.html\nwarning: LF will be replaced by CRLF in ide.sublime-workspace.\nThe file will have its original line endings in your working directory.\nwarning: LF will be replaced by CRLF in ide.sublime-workspace.\nThe file will have its original line endings in your working directory.\nwarning: LF will be replaced by CRLF in ide.sublime-workspace.\nThe file will have its original line endings in your working directory.",
+			"file": "src/views/index.html",
 			"settings":
 			{
-				"buffer_size": 548,
-				"line_ending": "Windows",
-				"name": "[SideBarGit@SublimeText]",
-				"scratch": true
+				"buffer_size": 1948,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "[SideBarGit@SublimeText localmarket/] cmd /C git push\n\n# Improve this command, the output or the tab title by posting here:\n# http://www.sublimetext.com/forum/viewtopic.php?f=5&t=3405\n# Tip: F5 will run the command again and refresh the contents of this tab\n\nwarning: push.default is unset; its implicit value is changing in\nGit 2.0 from 'matching' to 'simple'. To squelch this message\nand maintain the current behavior after the default changes, use:\n\n  git config --global push.default matching\n\nTo squelch this message and adopt the new behavior now, use:\n\n  git config --global push.default simple\n\nWhen push.default is set to 'matching', git will push local branches\nto the remote branches that already exist with the same name.\n\nIn Git 2.0, Git will default to the more conservative 'simple'\nbehavior, which only pushes the current branch to the corresponding\nremote branch that 'git pull' uses to update the current branch.\n\nSee 'git help config' and search for 'push.default' for further information.\n(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\n'current' instead of 'simple' if you sometimes use older versions of Git)\n\nremote: Stopping NodeJS cartridge[K\nremote: Sat Jul 04 2015 11:50:48 GMT-0400 (EDT): Stopping application 'localmarket' ...[K\nremote: Sat Jul 04 2015 11:50:49 GMT-0400 (EDT): Stopped Node application 'localmarket'[K\nremote: Syncing git content to other proxy gears[K\nremote: Saving away previously installed Node modules[K\nremote: Building git ref 'master', commit 91057c3[K\nremote: \nremote:   - Checking to see if Node.js version  is installed ... [K\nremote:   - Downloading and extracting http://nodejs.org/dist/v/node-v-linux-x64.tar.gz ... [K\nremote:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[K\nremote:                                  Dload  Upload   Total   Spent    Left  Speed[K\nremote: remote:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[Kremote: 162   162  162   162    0     0   1261      0 --:--:-- --:--:-- --:--:--  1421[K\nremote: \nremote: gzip: stdin: not in gzip format[K\nremote: tar: Child returned status 1[K\nremote: tar: Error is not recoverable: exiting now[K\nremote:   - Done installing Node.js version [K\nremote: Building NodeJS cartridge[K\nremote:   - PATH set to include custom node version () from[K\nremote:        /var/lib/openshift/5584da955004462af900000a/app-root/data/node-v-linux-x64/bin [K\nremote:     PATH = /var/lib/openshift/5584da955004462af900000a/app-root/data/node-v-linux-x64/bin:/var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/.bin:/var/lib/openshift/5584da955004462af900000a//.node_modules/.bin:/opt/rh/nodejs010/root/usr/bin:/var/lib/openshift/5584da955004462af900000a/haproxy/usr/bin:/bin:/usr/bin:/usr/sbin[K\nremote:   - Installing dependencies w/ new version of npm ... [K\nremote: \nremote: npm info it worked if it ends with ok[K\nremote: npm info using npm@1.3.24[K\nremote: npm info using node@v0.10.25[K\nremote: npm info preinstall Dumas@0.0.1[K\nremote: npm WARN package.json config@1.14.0 No README data[K\nremote: npm WARN package.json connect-mongo@0.8.1 No README data[K\nremote: npm WARN package.json connect-redis@2.3.0 No README data[K\nremote: npm WARN package.json consolidate@0.5.0 No repository field.[K\nremote: npm WARN package.json consolidate@0.5.0 No README data[K\nremote: npm WARN package.json express@3.0.6 No README data[K\nremote: npm WARN package.json mongodb@2.0.34 No README data[K\nremote: npm WARN package.json mongoose@3.4.0 bugs.email field must be a string email. Deleted.[K\nremote: npm WARN package.json mongoose@3.4.0 No README data[K\nremote: npm WARN package.json body-parser@1.12.4 No README data[K\nremote: npm WARN package.json connect@3.4.0 No README data[K\nremote: npm WARN package.json cookie-parser@1.3.5 No README data[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo[K\nremote: npm info linkStuff Dumas@0.0.1[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/body-parser[K\nremote: npm info preinstall body-parser@1.12.4[K\nremote: npm info linkStuff body-parser@1.12.4[K\nremote: npm info install body-parser@1.12.4[K\nremote: npm info postinstall body-parser@1.12.4[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/config-multipaas[K\nremote: npm info preinstall config-multipaas@0.1.0[K\nremote: npm info linkStuff config-multipaas@0.1.0[K\nremote: npm info install config-multipaas@0.1.0[K\nremote: npm info postinstall config-multipaas@0.1.0[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/connect[K\nremote: npm info preinstall connect@3.4.0[K\nremote: npm info linkStuff connect@3.4.0[K\nremote: npm info install connect@3.4.0[K\nremote: npm info postinstall connect@3.4.0[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/connect-redis[K\nremote: npm info preinstall connect-redis@2.3.0[K\nremote: npm info linkStuff connect-redis@2.3.0[K\nremote: npm info install connect-redis@2.3.0[K\nremote: npm info postinstall connect-redis@2.3.0[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/cookie-parser[K\nremote: npm info preinstall cookie-parser@1.3.5[K\nremote: npm info linkStuff cookie-parser@1.3.5[K\nremote: npm info install cookie-parser@1.3.5[K\nremote: npm info postinstall cookie-parser@1.3.5[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/debug[K\nremote: npm info preinstall debug@2.2.0[K\nremote: npm info linkStuff debug@2.2.0[K\nremote: npm info install debug@2.2.0[K\nremote: npm info postinstall debug@2.2.0[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/mongodb[K\nremote: npm info preinstall mongodb@2.0.34[K\nremote: npm info linkStuff mongodb@2.0.34[K\nremote: npm info install mongodb@2.0.34[K\nremote: npm info postinstall mongodb@2.0.34[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/redis[K\nremote: npm info preinstall redis@0.12.1[K\nremote: npm info linkStuff redis@0.12.1[K\nremote: npm info install redis@0.12.1[K\nremote: npm info postinstall redis@0.12.1[K\nremote: npm info build /var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/restify[K\nremote: npm info preinstall restify@2.8.5[K\nremote: npm info linkStuff restify@2.8.5[K\nremote: npm info install restify@2.8.5[K\nremote: npm info postinstall restify@2.8.5[K\nremote: npm info install Dumas@0.0.1[K\nremote: npm info postinstall Dumas@0.0.1[K\nremote: npm info prepublish Dumas@0.0.1[K\nremote: npm info ok [K\nremote: Preparing build for deployment[K\nremote: Deployment id is c98f70b6[K\nremote: Activating deployment[K\nremote: HAProxy already running[K\nremote: HAProxy instance is started[K\nremote:   - Checking to see if Node.js version  is installed ... [K\nremote:   - Downloading and extracting http://nodejs.org/dist/v/node-v-linux-x64.tar.gz ... [K\nremote:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[K\nremote:                                  Dload  Upload   Total   Spent    Left  Speed[K\nremote: remote:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[Kremote: 162   162  162   162    0     0    434      0 --:--:-- --:--:-- --:--:--   440[K\nremote: \nremote: gzip: stdin: not in gzip format[K\nremote: tar: Child returned status 1[K\nremote: tar: Error is not recoverable: exiting now[K\nremote:   - Done installing Node.js version [K\nremote: \nremote:   - pre_start_nodejs: Adding Node.js version  binaries to path[K\nremote:   - PATH set to include custom node version () from[K\nremote:        /var/lib/openshift/5584da955004462af900000a/app-root/data/node-v-linux-x64/bin [K\nremote:     PATH = /var/lib/openshift/5584da955004462af900000a/app-root/data/node-v-linux-x64/bin:/var/lib/openshift/5584da955004462af900000a/app-root/runtime/repo/node_modules/.bin:/var/lib/openshift/5584da955004462af900000a//.node_modules/.bin:/opt/rh/nodejs010/root/usr/bin:/var/lib/openshift/5584da955004462af900000a/haproxy/usr/bin:/bin:/usr/bin:/usr/sbin[K\nremote: Starting NodeJS cartridge[K\nremote: Sat Jul 04 2015 11:51:37 GMT-0400 (EDT): Starting application 'localmarket' ...[K\nremote: -------------------------[K\nremote: Git Post-Receive Result: success[K\nremote: Activation status: success[K\nremote: Deployment completed with status: success[K\nTo ssh://5584da955004462af900000a@localmarket-harishapps.rhcloud.com/~/git/localmarket.git/\n   b466c4d..91057c3  master -> master",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 8860,
+				"buffer_size": 429,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/routes/birds.js",
+			"settings":
+			{
+				"buffer_size": 427,
 				"line_ending": "Windows",
-				"name": "No Title",
-				"scratch": true
+				"name": "var express = require('express');"
+			}
+		},
+		{
+			"file": "src/models/user.js",
+			"settings":
+			{
+				"buffer_size": 231,
+				"line_ending": "Windows",
+				"name": "var mongoose     = require('mongoose');"
+			}
+		},
+		{
+			"file": "src/routes/users.js",
+			"settings":
+			{
+				"buffer_size": 2268,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/default.json",
+			"settings":
+			{
+				"buffer_size": 118,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -131,19 +175,30 @@
 	},
 	"expanded_folders":
 	[
-		"/D/hobbyWorkspace/localmarket/app",
-		"/D/hobbyWorkspace/localmarket/app/views",
-		"/D/hobbyWorkspace/localmarket/app/views/user",
-		"/D/hobbyWorkspace/localmarket/config"
+		"/D/hobbyWorkspace/localmarket",
+		"/D/hobbyWorkspace/localmarket/config",
+		"/D/hobbyWorkspace/localmarket/public",
+		"/D/hobbyWorkspace/localmarket/src",
+		"/D/hobbyWorkspace/localmarket/src/models",
+		"/D/hobbyWorkspace/localmarket/src/routes",
+		"/D/hobbyWorkspace/localmarket/src/views",
+		"/D/hobbyWorkspace/localmarket/src/views/user"
 	],
 	"file_history":
 	[
+		"/C/Users/3clogic/AppData/Local/Microsoft/Windows/INetCache/IE/G52CCV1I/WhatsApp_chat_with_Swathi_reddy[1].txt",
+		"/D/hobbyWorkspace/localmarket/app/views/user/registration.html",
+		"/D/hobbyWorkspace/localmarket/app/js/app.js",
+		"/D/hobbyWorkspace/localmarket/app/views/user/home.html",
+		"/D/hobbyWorkspace/localmarket/app/views/index.html",
+		"/D/hobbyWorkspace/localmarket/config/default.json",
+		"/D/hobbyWorkspace/localmarket/config/production.json",
+		"/C/Users/3clogic/workspace/kclDistributor/src/test/resources/clientData.json",
 		"/D/hobbyWorkspace/localmarket/index.html",
 		"/D/hobbyWorkspace/localmarket/server.js",
 		"/C/Users/3clogic/Desktop/mongoStart",
 		"/C/Users/3clogic/Desktop/translate.patch",
 		"/D/hobbyWorkspace/localmarket/package.json",
-		"/D/hobbyWorkspace/localmarket/config/default.json",
 		"/D/hobbyWorkspace/localmarket/config/openshift.json",
 		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/pre_start_nodejs",
 		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks/pre_build",
@@ -258,14 +313,7 @@
 		"/D/solr-5.0.0/server/solr/3clogic/conf/solr-data-config.xml",
 		"/D/solr-5.0.0/server/solr/3clogic/conf/solrconfig.xml",
 		"/D/solr_oldbkp/cc_7/conf/solrconfig.xml",
-		"/D/solr_oldbkp/solr.xml",
-		"/D/solr-5.0.0/example/schemaless/solr/gettingstarted/conf/solrconfig.xml",
-		"/D/solr-5.0.0/example/schemaless/solr/gettingstarted/conf/data-config",
-		"/D/solr-5.0.0/server/solr/cc_7/conf/data-config.xml",
-		"/D/solr-5.0.0/server/solr/cc_7/conf/schema.xml",
-		"/D/solr-5.0.0/server/solr/cc_7/conf/solrconfig.xml",
-		"/D/solr-5.0.0/server/solr/3clogic/conf/schema.xml",
-		"/D/solr-5.0.0/server/solr/configsets/basic_configs/conf/schema.xml"
+		"/D/solr_oldbkp/solr.xml"
 	],
 	"find":
 	{
@@ -283,6 +331,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dbmessage",
+			"/user",
+			"app.",
+			"engines",
 			"scroller",
 			"factory=\"org.apache.commons.dbcp.BasicDataSourceFactory\"",
 			"cccl0g1c",
@@ -362,6 +414,8 @@
 		"replace_history":
 		[
 			"",
+			"router.",
+			"",
 			"root"
 		],
 		"reverse": false,
@@ -373,24 +427,112 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/index.html",
+					"file": "server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1944,
+						"buffer_size": 3101,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								2811,
+								2811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1559.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config/production.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/views/user/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/views/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -407,147 +549,142 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/views/user/registration.html",
+					"buffer": 4,
+					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3122,
+						"buffer_size": 429,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1053,
-								1053
+								339,
+								339
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/routes/birds.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 427,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								403,
+								427
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var express = require('express');",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/models/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								223,
+								223
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var mongoose     = require('mongoose');",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/routes/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1755,
+								1778
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 520.0,
+						"translation.y": 936.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 8,
+					"file": "config/default.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 908,
+						"buffer_size": 118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								118,
+								118
 							]
 						],
 						"settings":
 						{
-							"SideBarGitBackground": false,
-							"SideBarGitCommand":
-							[
-								"git",
-								"add",
-								"--",
-								"."
-							],
-							"SideBarGitIsASideBarGitTab": true,
-							"SideBarGitItem": "D:\\hobbyWorkspace\\localmarket",
-							"SideBarGitModal": false,
-							"SideBarGitNoResults": "No output to show",
-							"SideBarGitSyntaxFile": false,
-							"SideBarGitTitle": "No Title",
-							"SideBarGitToStatusBar": false,
-							"default_dir": "D:\\hobbyWorkspace",
-							"encoding": "UTF-8",
-							"fallback_encoding": "UTF-8",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 548,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "[SideBarGit@SublimeText]",
-							"default_dir": "D:\\hobbyWorkspace\\localmarket",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8860,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"SideBarGitBackground": false,
-							"SideBarGitCommand":
-							[
-								"cmd",
-								"/C",
-								"git",
-								"push"
-							],
-							"SideBarGitIsASideBarGitTab": true,
-							"SideBarGitItem": "D:\\hobbyWorkspace\\localmarket",
-							"SideBarGitModal": true,
-							"SideBarGitNoResults": "No output to show",
-							"SideBarGitSyntaxFile": false,
-							"SideBarGitTitle": "No Title",
-							"SideBarGitToStatusBar": false,
-							"default_dir": "D:\\hobbyWorkspace",
-							"encoding": "UTF-8",
-							"fallback_encoding": "UTF-8",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -598,7 +735,7 @@
 	"project": "ide.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 80.0
 	},
 	"save_all_on_build": true,
 	"select_file":
