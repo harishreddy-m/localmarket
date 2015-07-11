@@ -74,15 +74,10 @@ dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbCo
 /*
 Routes
 */
-    var birds = require('./src/routes/birds');
-    var users = require('./src/routes/users');
-
-    app.use('/birds', birds);
+    app.use('/vendor', require('./src/routes/vendors'));
     
-    app.use('/user', users);
+    app.use('/user', require('./src/routes/users'));
 
-
-var User = require('./src/models/user');
 
 
 
@@ -90,8 +85,8 @@ var User = require('./src/models/user');
 
 app.get("/", function (req, res) {
     res.render('index', {
-        title:apptitle,
-        message:''
+        title:config.get('App.title'),
+        message:'Welcome!!'
     });
 });
 
@@ -103,7 +98,7 @@ app.get('/logout', function (req, res) {
     req.session.loggedIn = false;
     res.render('index',{
         title:config.get('App.title'),
-        message:''});
+        message:'Byee!!'});
 });
 
 

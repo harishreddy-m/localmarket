@@ -32,10 +32,8 @@ router.post('/login', function (req, res) {
 
             req.session.loggedIn = true;
 
-            res.render('user/home', {
-                user:user[0],
-                title:config.get('App.title')
-            });
+            res.redirect('/'+user[0].username);
+            
         } else {
             console.log('ERROR: Wrong Username or Password');
             res.render('index', {
