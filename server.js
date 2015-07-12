@@ -13,6 +13,8 @@ var express = require("express"),
     session = require('express-session'),
     morgan         = require('morgan'),
     bodyParser     = require('body-parser'),
+     multer  = require('multer'),
+
     methodOverride = require('method-override'),
     engines = require('consolidate'),
     app = express(),
@@ -61,7 +63,9 @@ dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbCo
     app.use(morgan('dev'));                     // log every request to the console
     app.use(bodyParser.urlencoded({ extended: false }))    // parse application/x-www-form-urlencoded
     app.use(bodyParser.json())    // parse application/json
-    app.use(methodOverride()); 
+    app.use(methodOverride());
+    app.use(multer({ dest: './public/data/'}));
+
     app.engine('html', engines.underscore);
 
     /*

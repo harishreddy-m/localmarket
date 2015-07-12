@@ -1,0 +1,17 @@
+<form ng-controller="VendorController" ng-submit="add()" name="addForm">
+  <div class="form-group">
+  <input type="text" ng-model="vendor.name" class="form-control" placeholder="Vendor Name">
+    <input type="email" ng-model="vendor.email" class="form-control" id="vendormail" placeholder="Email">
+  </div>
+  <label for="categories">Categories</label>
+  <textarea class="form-control" rows="3" id="categories" ng-model="vendor.categories"></textarea>
+<label for="pincodes">Pincodes</label>
+  <textarea class="form-control" rows="3" id="pincodes" ng-model="vendor.pincodes"></textarea>
+
+  <div class="form-group">
+    <label for="vendorlogo">Image</label>
+    <input type="file" id="vendorlogo" nv-file-select uploader="uploader">
+    <p class="help-block">Vendor logo</p>
+  </div>
+  <button type="submit" class="btn btn-default" ng-disabled="uploader.isUploading">Save</button>
+</form>

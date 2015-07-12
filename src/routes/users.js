@@ -32,7 +32,7 @@ router.post('/login', function (req, res) {
 
             req.session.loggedIn = true;
 
-            res.redirect('/'+user[0].username);
+            res.redirect(user[0].username);
             
         } else {
             console.log('ERROR: Wrong Username or Password');
@@ -79,7 +79,7 @@ router.post("/create", function (req, res) {
         if (err) res.json(err)
         //res.end('Registration '+user.username +' Ok!');
         req.session.loggedIn = true;
-        res.redirect('/' + user.username);
+        res.redirect(user.username);
     });
 });
 

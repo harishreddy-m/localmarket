@@ -7,6 +7,7 @@
     "lodash": "latest",
     "bootstrap-css-only": "latest",
     "angular-local-storage": "latest",
+    "angular-file-upload":"latest",
     "angular-bootstrap": "latest",
     "angular-growl-v2": "latest",
     "angular-animate": "latest",

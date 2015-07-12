@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
     <title><%= title %></title>
@@ -6,42 +6,52 @@
     <link rel="stylesheet" href="/js/lib/bootstrap-css-only/css/bootstrap.css">
     <link rel="stylesheet" href="/js/lib/angular-growl-v2/build/angular-growl.css">
     <link rel="stylesheet" href="/js/lib/components-font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/site.css">
     <!-- endinjector -->
     <!-- injector:js -->
+    <script src="/js/lib/es5-shim/es5-shim.js"></script>
     <script src="/js/lib/angular/angular.js"></script>
     <script src="/js/lib/ui-router/release/angular-ui-router.js"></script>
     <script src="/js/lib/lodash/lodash.js"></script>
     <script src="/js/lib/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="/js/lib/angular-file-upload/angular-file-upload.js"></script>
     <script src="/js/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="/js/lib/angular-growl-v2/build/angular-growl.js"></script>
     <script src="/js/lib/angular-animate/angular-animate.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/app/app.js"></script>
+    <script src="/js/app/controllers/vendorcontroller.js"></script>
+    <script src="/js/app/services/vendorservice.js"></script>
     <!-- endinjector -->
 
-<body ng-app="offeringsApp" >
+    <body ng-app="offeringsApp" >
+    <div growl></div>
 
-   
+        <div id="main">
 
-<div class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand"><%= title %></a>
-            <ul class="nav pull-right">
-                <li><a  href="/logout">Logout</a></li>
-            </ul>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><%= title %></a>
+
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a  href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container" >
+                <div class="hero-unit">
+                    <h4>Welcome, <%= user.username %></h4>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <a ui-sref="vendors" class="btn btn-primary">List Vendors</a>
+
+                        <a ui-sref="new" class="btn btn-danger">Add a Vendor</a></div>
+                        <div class="col-md-8"><div ui-view></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<div class="container" id="main">
-    <div class="hero-unit">
-        <h4>Welcome, <%= user.username %></h4>
-         <div ui-view></div>
-
-
-    </div>
-</div>
-</body>
-</html>
+    </body>
+    </html>

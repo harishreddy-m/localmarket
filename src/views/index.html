@@ -3,49 +3,48 @@
 <head>
     <title><%= title %></title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="/css/site.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 </head>
 <body>
+<div id="main">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><%= title %></a>
 
-<div class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand"><%= title %></a>
-
-            <!-- Start of the nav bar content -->
-            <div class="nav-collapse"><!-- Other nav bar content -->
-
-                <!-- The drop down menu -->
-                <ul class="nav pull-right">
-                    <li><a href="/user/registration">Sign Up</a></li>
-                    <li class="divider-vertical"></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                            <!-- Login form here -->
-                            <form action="/user/login" method="POST">
-
-                                <input class="input-large" name="username" type="text" id="username" placeholder="Username">
-
-                                <input class="input-large" name="password" type="password" id="password" placeholder="Password">
-
-                                <button type="submit" class="btn btn-primary">Sign in</button>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </div>
-</div>
+            <ul class="nav navbar-nav navbar-right"> <li><a href="/user/registration">Sign Up</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+                    <div class="dropdown-menu" style="padding:17px;" >
+                        <!-- Login form here -->
+                        <form class="form" action="/user/login" method="POST">
 
-<div class="container" id="main">
-    <%= message %>
-</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                            <input class="input-large" name="username" type="text" id="username" placeholder="Username">
+
+                            <input class="input-large" name="password" type="password" id="password" placeholder="Password">
+
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" >
+        <%= message %>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--
 -->
 </body>

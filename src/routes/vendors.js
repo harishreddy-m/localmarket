@@ -1,22 +1,29 @@
 var express = require('express');
 var router = express.Router();
-
 // middleware specific to this router
-router.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now());
-  next();
-});
+var Vendor = require('../models/vendor');
+
 // define the home page route
-router.get('/', function(req, res) {
-  res.send('List all vendors');
+router.get('/pincode/:pin', function(req, res) {
+  Vendor.find({ pincodes: req.params.pin}, function(error,vendors){
+  	res.send(vendors);
+  });
+
 });
 // define the about route
-router.get('/:id', function(req, res) {
+router.get('/detail/:id', function(req, res) {
   res.send('About ');
 });
 
 router.post('/new',function(req,res){
-
+	var cats = req.body.categories.split(",");
+	var pins = req.body.pincodes.split(",");
+	var url = req.files.file.path.replace('public',"").replace('\\','/');
+	Vendor.create({name:req.body.name,email:req.body.email,logo:url,categories:cats,pincodes:pins},function(err,vendor){
+		if(!err)
+		console.log(vendor);
+	})
+	res.send("success");
 });
 
 module.exports = router;

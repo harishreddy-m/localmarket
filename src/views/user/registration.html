@@ -2,83 +2,80 @@
 <html>
 <head>
     <title><%= title %></title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <meta charset="utf-8"><!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<div class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner">
+<div id="main">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><%= title %></a>
+
+            </div>
+            <ul class="nav navbar-nav navbar-right"> <li><a href="/user/registration">Sign Up</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+                    <div class="dropdown-menu" style="padding:17px;" >
+                        <!-- Login form here -->
+                        <form class="form" action="/user/login" method="POST">
+
+                            <input class="input-large" name="username" type="text" id="username" placeholder="Username">
+
+                            <input class="input-large" name="password" type="password" id="password" placeholder="Password">
+
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
         <div class="container">
-            <a class="brand"><%= title %></a>
 
-            <div class="nav-collapse"><!-- Other nav bar content -->
+            <div class="hero-unit reg=header">
+                <h4>Registration Form</h4>
+            </div>
 
-                <!-- The drop down menu -->
-                <ul class="nav pull-right">
-                    <li><a href="/user/registration">Sign Up</a></li>
-                    <li class="divider-vertical"></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong
-                                class="caret"></strong></a>
+            <div id="regForm">
 
-                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                            <!-- Login form here -->
-                            <form action="/user/login" method="POST">
+                <form action="/user/create" method="POST" class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="username_input">Username</label>
 
-                                <input class="input-large" name="username" type="text" id="username" placeholder="Username">
-
-                                <input class="input-large" name="password" type="password" id="password" placeholder="Password">
-
-                                <button type="submit" class="btn btn-primary">Sign in</button>
-                            </form>
+                        <div class="controls">
+                            <input type="text" id="username_input" name="username">
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="control-group">
+                        <label for="email_input" class="control-label" for="email_input">Email</label>
+
+                        <div class="controls">
+                            <input type="text" id="email_input" name="email">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="password_input" for="password_input" class="control-label">Password</label>
+
+                        <div class="controls">
+                            <input type="password" id="password_input" name="password">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="submit" name="Submit" value="Register" class="btn">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-</div>
-<div class="container">
-
-    <div class="hero-unit reg=header">
-        <h4>Registration Form</h4>
-    </div>
-
-    <div id="regForm">
-
-        <form action="/user/create" method="POST" class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label" for="username_input">Username</label>
-
-                <div class="controls">
-                    <input type="text" id="username_input" name="username">
-                </div>
-            </div>
-            <div class="control-group">
-                <label for="email_input" class="control-label" for="email_input">Email</label>
-
-                <div class="controls">
-                    <input type="text" id="email_input" name="email">
-                </div>
-            </div>
-            <div class="control-group">
-                <label for="password_input" for="password_input" class="control-label">Password</label>
-
-                <div class="controls">
-                    <input type="password" id="password_input" name="password">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input type="submit" name="Submit" value="Register" class="btn">
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-</body>
-</html>
+        </div>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    </body>
+    </html>

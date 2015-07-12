@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             options: { ignorePath: 'public/', addRootSlash: true },
             local_dependencies: {
                 files: {
-                    'src/views/user/home.html': ['bower.json', 'public/js/*.js', 'public/css/*.css','public/js/lib/ngwidgets/styles/**/*.css']
+                    'src/views/user/home.html': ['bower.json', 'public/js/app/**/*.js', 'public/css/**/*.css']
                 }
             }
         }
