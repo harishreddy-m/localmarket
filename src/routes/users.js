@@ -12,20 +12,13 @@ Models
 
 // REGISTRATION
 router.get('/registration', function (req, res) {
-    User.findOne({username:"khalas"}).exec(function(err,result){
-        if(err)
-            console.log(err);
-        
-            console.log(result);
-            res.render("user/registration", {title:config.get('App.title')});
-    });
-    
+     res.render("user/registration", {title:config.get('App.title')});
 });
 
 // AUTHENTICATION
 router.post('/login', function (req, res) {
     console.log(req.body);
-    User.find({username:req.body.username, password:req.body.password}).exec( function (err, user) {
+    User.findOne({username:req.body.username, password:req.body.password}).exec( function (err, user) {
         if (user.length > 0) {
             console.log('User Data:\n');
             console.log(user);

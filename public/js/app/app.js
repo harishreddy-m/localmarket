@@ -3,7 +3,7 @@
 *
 */
 
-var offeringsApp = angular.module('offeringsApp', ['ui.router','angularFileUpload','angular-growl']);
+var offeringsApp = angular.module('offeringsApp', ['ui.router','angularFileUpload','angular-growl','ui.grid']);
 
 offeringsApp.config(function($stateProvider, $urlRouterProvider) {
     
