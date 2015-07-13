@@ -16,8 +16,8 @@ Technology stack
 - Mongo (only 2.4 available on openshift)
 
 (bower and grunt are used to inject client side dependencies into home.html using following commands.No need to run these when deploying app.Look into grunt.js and .bowerc to get details)
-bower install
-grunt.cmd
+1. bower install
+2. grunt.cmd (on windows) / grunt (on linux)
 
 
 TO-DO
