@@ -3,9 +3,12 @@ angular.module('offeringsApp').controller('VendorController', ['$scope','vendorS
   $scope.vendors=[];
   $scope.gridOptions = {
         enableSorting: true,
+        enableColumnResizing :true,
         columnDefs: [
           { name:'Name', field: 'name' },
           { name:'email', field: 'email' },
+          { name:'phone', field: 'phone' },
+          { name:'address', field: 'address' },
           { name:'Services', field: 'categories.join(",")',enableSorting:false},
           { name:'Areas', field: 'pincodes.join(",")',enableSorting:false}
         ]
@@ -23,7 +26,7 @@ angular.module('offeringsApp').controller('VendorController', ['$scope','vendorS
   /*
   Add vendor
   */
-  $scope.vendor={name:"default"};
+  $scope.vendor={};
   $scope.uploader= new FileUploader({url:'/vendor/new',formData:[$scope.vendor]});
   $scope.add = function(){
     if($scope.uploader.queue.length>0)

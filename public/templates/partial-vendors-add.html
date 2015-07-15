@@ -1,7 +1,9 @@
 <form ng-controller="VendorController" ng-submit="add()" name="addForm">
   <div class="form-group">
   <input type="text" ng-model="vendor.name" class="form-control" placeholder="Vendor Name">
-    <input type="email" ng-model="vendor.email" class="form-control" id="vendormail" placeholder="Email">
+  <input type="email" ng-model="vendor.email" class="form-control" id="vendormail" placeholder="Email">
+   <input type="text" ng-model="vendor.phone" class="form-control" id="vendorphone" placeholder="Phone Number">
+   <textarea ng-model="vendor.address" class="form-control" rows="3" id="address"  placeholder="Address"></textarea>
   </div>
   <label for="categories">Categories</label>
   <textarea class="form-control" rows="3" id="categories" ng-model="vendor.categories"></textarea>

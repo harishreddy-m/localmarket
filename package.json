@@ -1,5 +1,5 @@
 {
-	"name": "Dumas",
+	"name": "Offerings",
 	"description": "app using express & mongodb",
 	"version": "0.0.1",
 	"private": "true",
