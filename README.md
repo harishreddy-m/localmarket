@@ -28,7 +28,7 @@ TO-DO
   - [ ] billing page
   
 - [ ] admin management pages
-  - [ ] Add address,phone number fields to search table and registration page
-
+  - [x] Add address,phone number fields to search table and registration page
+  - [ ] Add delete button on right clicking vendor row
 
 
