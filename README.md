@@ -21,14 +21,5 @@ Technology stack
 2. grunt.cmd (on windows) / grunt (on linux)
 
 
-TO-DO
-=====
-- [ ] client information pages
-  - [ ] services listing
-  - [ ] billing page
-  
-- [ ] admin management pages
-  - [x] Add address,phone number fields to search table and registration page
-  - [ ] Add delete button on right clicking vendor row
 
 
