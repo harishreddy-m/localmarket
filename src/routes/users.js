@@ -19,13 +19,11 @@ router.get('/registration', function (req, res) {
 router.post('/login', function (req, res) {
     console.log(req.body);
     User.findOne({username:req.body.username, password:req.body.password}).exec( function (err, user) {
-        if (user.length > 0) {
-            console.log('User Data:\n');
-            console.log(user);
+        if (user) {
 
             req.session.loggedIn = true;
 
-            res.redirect(user[0].username);
+            res.redirect(user.username);
             
         } else {
             console.log('ERROR: Wrong Username or Password');

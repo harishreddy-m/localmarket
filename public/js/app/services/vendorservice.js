@@ -5,4 +5,10 @@ angular.module('offeringsApp').service('vendorService', function($http){
       });
 		return promise
 	}
+	this.delete = function(vendorsIds){
+		var promise = $http.post('/vendor/delete/',{"todelete":vendorsIds}).then(function (response) {
+        return response.data;
+      });
+		return promise
+	}
 });
