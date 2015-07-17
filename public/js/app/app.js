@@ -27,11 +27,11 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl:'/templates/admin-home.html'
         })
         .state('home.admin.vendors', {
-            url: 'vendors',
+            url: '/vendors',
             templateUrl: '/templates/partial-vendors.html'
         })
         .state('home.admin.new', {
-            url: 'new',
+            url: '/new',
             templateUrl: '/templates/partial-vendors-add.html'
         });
 
