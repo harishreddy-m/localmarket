@@ -81,18 +81,36 @@ Routes
     app.use('/vendor', require('./src/routes/vendors'));
     
     app.use('/user', require('./src/routes/users'));
-
+    app.use('/customer', require('./src/routes/customers'));
 
 
 
 
 
 app.get("/", function (req, res) {
+        if (req.session.loggedIn) {
+            res.redirect('/home')
+}else{
     res.render('index', {
         title:config.get('App.title'),
         message:'Welcome!!'
     });
+}
 });
+
+app.get("/home", function (req, res) {
+    if (req.session.loggedIn) {
+        res.render('user/home', {
+            user:req.session.user,
+            title: config.get('App.title')
+        });
+    } else {
+        res.render('index', {
+            title:config.get('App.title'),
+            message:'Welcome!!'
+        });
+    }
+})
 
 
 

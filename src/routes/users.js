@@ -12,18 +12,31 @@ Models
 
 // REGISTRATION
 router.get('/registration', function (req, res) {
-     res.render("user/registration", {title:config.get('App.title')});
+   res.render("user/registration", {title:config.get('App.title')});
 });
+
+router.get('/role', function (req, res) {
+  if(req.session.user.isCustomer)
+                res.send("customer");//);
+            else
+                res.send("admin");
+});
+
+
+
 
 // AUTHENTICATION
 router.post('/login', function (req, res) {
-    console.log(req.body);
+    
     User.findOne({username:req.body.username, password:req.body.password}).exec( function (err, user) {
         if (user) {
 
             req.session.loggedIn = true;
-
-            res.redirect(user.username);
+            req.session.user = user;
+            if(user.isCustomer)
+                res.redirect("/#customer/"+user.username);//);
+            else
+                res.redirect("/#admin/");
             
         } else {
             console.log('ERROR: Wrong Username or Password');
@@ -35,43 +48,23 @@ router.post('/login', function (req, res) {
     });
 });
 
-router.param('name', function (req, res, next, name) {
-    User.find({username:name}, function (err, user) {
-        req.user = user[0];
-        console.log(user);
-        next();
-    });
-})
 
-router.get("/:name", function (req, res) {
-    if (req.session.loggedIn) {
-        res.render('user/home', {
-            user:req.user,
-            title: config.get('App.title')
-        });
-    } else {
-        res.render('index', {
-            title:config.get('App.title'),
-            message:''
-        });
-    }
-})
 
 // CREATE USER
 router.post("/create", function (req, res) {
+ console.log(req.body);
+ var user = new User({
+    username:req.body.username,
+    password:req.body.password,
+    email:req.body.email,
+    isCustomer:req.body.isCustomer=='on'
+});
 
-    var user = new User({
-        username:req.body.username,
-        password:req.body.password,
-        email:req.body.email
-    });
-
-    user.save(function (err, user) {
-        if (err) res.json(err)
+ user.save(function (err, user) {
+    if (err) res.json(err)
         //res.end('Registration '+user.username +' Ok!');
-        req.session.loggedIn = true;
-        res.redirect(user.username);
-    });
+    res.redirect("/home");
+});
 });
 
 

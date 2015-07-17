@@ -21,12 +21,13 @@
     <script src="/js/lib/angular-animate/angular-animate.js"></script>
     <script src="/js/lib/angular-ui-grid/ui-grid.js"></script>
     <script src="/js/app/app.js"></script>
+    <script src="/js/app/controllers/customercontroller.js"></script>
     <script src="/js/app/controllers/vendorcontroller.js"></script>
     <script src="/js/app/services/vendorservice.js"></script>
     <!-- endinjector -->
 
     <body ng-app="offeringsApp" >
-    <div growl></div>
+        <div growl></div>
 
         <div id="main">
 
@@ -34,10 +35,13 @@
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#"><%= title %></a>
+                        <a class="navbar-brand" href="/"><%= title %></a>
 
                     </div>
                     <ul class="nav navbar-nav navbar-right">
+                        <% if (!user.isCustomer) { %>
+                        <li><a href="/user/registration">Add User</a></li>
+                        <% } %>
                         <li><a  href="/logout">Logout</a></li>
                     </ul>
                 </div>
@@ -46,14 +50,10 @@
                 <div class="hero-unit">
                     <h4>Welcome, <%= user.username %></h4>
                     <div class="row">
-                      <div class="col-md-3">
-                        <a ui-sref="vendors" class="btn btn-primary">List Vendors</a>
-
-                        <a ui-sref="new" class="btn btn-danger">Add a Vendor</a></div>
-                        <div class="col-md-9"><div ui-view></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-    </html>
+                      <div ui-view></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </body>
+  </html>

@@ -11,30 +11,16 @@
 <div id="main">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#"><%= title %></a>
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><%= title %></a>
 
-            </div>
-            <ul class="nav navbar-nav navbar-right"> <li><a href="/user/registration">Sign Up</a></li>
-                <li class="divider-vertical"></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-                    <div class="dropdown-menu" style="padding:17px;" >
-                        <!-- Login form here -->
-                        <form class="form" action="/user/login" method="POST">
-
-                            <input class="input-large" name="username" type="text" id="username" placeholder="Username">
-
-                            <input class="input-large" name="password" type="password" id="password" placeholder="Password">
-
-                            <button type="submit" class="btn btn-primary">Sign in</button>
-                        </form>
                     </div>
-                </li>
-                
-            </ul>
-        </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/user/registration">Add User</a></li>
+                        <li><a  href="/logout">Logout</a></li>
+                    </ul>
+                </div>
     </nav>
         <div class="container">
 
@@ -66,6 +52,7 @@
                             <input type="password" id="password_input" name="password">
                         </div>
                     </div>
+                     <label><input type="checkbox" name="isCustomer" id="customer"> Customer </label>
                     <div class="control-group">
                         <div class="controls">
                             <input type="submit" name="Submit" value="Register" class="btn">
