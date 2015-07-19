@@ -1,7 +1,7 @@
 {
   "App": {
   	"title":"Offerings",
-    "dbConfig":{"url":"mongodb://localhost/localmarket"},
+    "dbConfig":{"url":"mongodb://harish:qwerty123@ds047800.mongolab.com:47800/offerings"},
     "Port":"3000"
   }
 }
