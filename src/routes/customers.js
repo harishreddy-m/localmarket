@@ -6,6 +6,15 @@ var _ = require('underscore');
 var Customer = require('../models/customer');
 
 
+
+
+router.post("/profile",function(req,res){
+	Customer.findOneAndUpdate({whois:req.session.user._id}, {pincode:req.body.pincode}, function(err) {
+		if(!err)
+			res.send("success");
+	});
+});
+
 router.get("/items",function(req,res){
 	Customer.findOne({whois:req.session.user._id},function(error,customer){
 		if(error)
@@ -16,20 +25,12 @@ router.get("/items",function(req,res){
 				_.each(vendors,function(vendor){
 					cats=cats.concat(vendor.categories);
 				});
-				
-				res.send(_.uniq(cats));
+				cats = _.uniq(cats);
+
+				res.send();
 			});
 		}
 	});
 });
-
-router.post("/profile",function(req,res){
-	Customer.findOneAndUpdate({whois:req.session.user._id}, {pincode:req.body.pincode}, function(err) {
-		if(!err)
-			res.send("success");
-	});
-});
-
-
 
 module.exports = router;

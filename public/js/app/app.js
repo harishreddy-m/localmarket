@@ -23,6 +23,11 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider) {
         .state('home.admin.new', {
           url: '/new',
           templateUrl: '/templates/partial-vendors-add.html'
+        })
+        .state('home.admin.items', {
+          url: '/items',
+          templateUrl: '/templates/partial-items.html',
+          controller:'itemController'
         });
 
         $stateProvider.state('home.customer',{

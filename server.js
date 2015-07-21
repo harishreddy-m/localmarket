@@ -84,6 +84,7 @@ Routes
     
     app.use('/user', require('./src/routes/users'));
     app.use('/customer', require('./src/routes/customers'));
+    app.use('/shop', require('./src/routes/items'));
 
 
 
