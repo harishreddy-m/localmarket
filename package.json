@@ -15,7 +15,8 @@
     "mongoose": "4.0.6",
     "jade": ">= 0.0.1",
     "connect-mongo": "0.8.1",
-    "config": "*"
+    "config": "*",
+    "connect-multiparty":"*"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

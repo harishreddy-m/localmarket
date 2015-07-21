@@ -12,7 +12,9 @@
     "angular-growl-v2": "latest",
     "angular-animate": "latest",
     "components-font-awesome": "latest",
-    "angular-ui-grid": "3.*"
+    "angular-ui-grid": "3.*",
+    "ng-file-upload":"latest",
+    "ng-file-upload-shim":"latest"
   },
   "resolutions": {
     "angular": "1.4.2",

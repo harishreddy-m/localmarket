@@ -1,16 +1,30 @@
 <div class="col-md-4">
-<p>selected Category  : {{selectedCategory.label}}</p>
-    
-      <select ng-model="selectedCategory" ng-change="getItemForcategory()"
-                ng-options="cat.label for cat in categories">
-            </select>
+	<p>selected Category  : {{selectedCategory.label}}</p>
+
+	<select ng-model="selectedCategory" ng-change="getItemForcategory()"
+	ng-options="cat.label for cat in categories">
+</select>
 
 
 </div>
 
 <div class="col-md-8">
-    <div ng-if='!items[selectedCategory.value]' >No Items in this category</div>
-	<div ng-repeat='item in items[selectedCategory.value]'>
+	<div class="row"><a class="btn btn-primary" ng-click="addItems()">Add Items</a></div><br/>
+	<div ng-if='!items[selectedCategory.value] && !adding' >No Items in this category</div>
+	<div ng-hide='adding' ng-repeat='item in items[selectedCategory.value]'>
 		<p>{{item.name}} - {{item.price}}</p>
 	</div>
-</div>
+	<div ng-show='adding' >
+		<form ng-submit="add()" name="itemForm">
+			<div class="form-group">
+			<input type="text" ng-model="item.name" class="form-control" placeholder="Item Name"> <br/>
+				<input type="price" ng-model="item.price" class="form-control" id="price" placeholder="price"><br/>
+
+				<div class="form-group">
+					<label for="image">Image</label>
+					<input type="file" id="image" ngf-select ngf-change="upload($files)" accept="image/*">
+				</div>
+				<button type="submit" class="btn btn-default" >Save</button>
+			</form>
+		</div>
+	</div>

@@ -30,7 +30,6 @@ router.post('/new',function(req,res){
 			res.send(500);
 		}
 	});
-	
 });
 
 router.post('/delete',function(req,res){

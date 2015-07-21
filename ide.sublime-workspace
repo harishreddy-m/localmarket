@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"ca",
+				"category"
+			],
+			[
+				"c",
+				"category"
+			],
+			[
+				"se",
+				"send"
+			],
+			[
+				"get",
+				"getItems"
+			],
+			[
+				"getitem",
+				"getItemForcategory"
+			],
+			[
 				"Ca",
 				"CategorySchema"
 			],
@@ -14,10 +34,6 @@
 			[
 				"d",
 				"display"
-			],
-			[
-				"c",
-				"customer"
 			],
 			[
 				"re",
@@ -66,10 +82,6 @@
 			[
 				"st",
 				"style	Attr"
-			],
-			[
-				"se",
-				"session"
 			],
 			[
 				"fin",
@@ -152,66 +164,53 @@
 	"buffers":
 	[
 		{
-			"file": "public/templates/customers-home.html",
+			"file": "public/js/app/controllers/itemcontroller.js",
 			"settings":
 			{
-				"buffer_size": 48,
+				"buffer_size": 915,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/js/app/controllers/displayController.js",
+			"file": "public/templates/partial-items.html",
 			"settings":
 			{
-				"buffer_size": 260,
+				"buffer_size": 1154,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/js/app/services/customerservice.js",
+			"file": "public/js/app/services/shopservice.js",
 			"settings":
 			{
-				"buffer_size": 327,
+				"buffer_size": 249,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/js/app/app.js",
+			"file": "src/routes/items.js",
 			"settings":
 			{
-				"buffer_size": 2095,
+				"buffer_size": 867,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/routes/customers.js",
+			"file": "/C/Users/3clogic/workspace/kclDistributor/docker/kube-config.txt",
 			"settings":
 			{
-				"buffer_size": 813,
-				"line_ending": "Windows"
+				"buffer_size": 10216,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/models/category.js",
+			"contents": "var express = require('express');\nvar router = express.Router();\nvar mongoose     = require('mongoose');\n\n// middleware specific to this router\nvar Vendor = require('../models/vendor');\n\n// define the home page route\nrouter.get('/pincode/:pin', function(req, res) {\n  Vendor.find({ pincodes: req.params.pin}, function(error,vendors){\n  	res.send(vendors);\n  });\n\n});\n// define the about route\nrouter.get('/detail/:id', function(req, res) {\n  res.send('About ');\n});\n\nrouter.post('/new',function(req,res){\n	var cats = req.body.categories.split(\",\");\n	var pins = req.body.pincodes.split(\",\");\n	var url = req.files.file.path.replace('public',\"\").replace('\\\\','/');\n	var add = req.body.address.replace(\"\\n\",\",\");\n	new Vendor({_id:mongoose.Types.ObjectId(),name:req.body.name,email:req.body.email,logo:url,categories:cats,pincodes:pins,phone:req.body.phone,address:add}).save(function(err,vendor){\n		if(!err){	\n		res.send(\"success\");\n		}else{\n			console.log(err);\n			res.send(500);\n		}\n	});\n});\n\nrouter.post('/delete',function(req,res){\n	var ids = req.body.todelete;\n	for(i=0;i<ids.length;i++){\n			console.log(ids[i]);\n	Vendor.findById(ids[i],function(err,doc){\n		console.log(doc);\n	})		\n	Vendor.findByIdAndRemove(ids[i],function(err,doc){\n		console.log(err);\n		res.send(\"success\");\n	})\n	}\n});\n\nmodule.exports = router;",
+			"file": "src/routes/vendors.js",
+			"file_size": 1365,
+			"file_write_time": 130815085052888602,
 			"settings":
 			{
-				"buffer_size": 286,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/models/item.js",
-			"settings":
-			{
-				"buffer_size": 198,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/models/customer.js",
-			"settings":
-			{
-				"buffer_size": 302,
+				"buffer_size": 1314,
 				"line_ending": "Windows"
 			}
 		}
@@ -269,6 +268,7 @@
 	},
 	"expanded_folders":
 	[
+		"/D/hobbyWorkspace/localmarket",
 		"/D/hobbyWorkspace/localmarket/config",
 		"/D/hobbyWorkspace/localmarket/public",
 		"/D/hobbyWorkspace/localmarket/public/js",
@@ -279,25 +279,33 @@
 		"/D/hobbyWorkspace/localmarket/src",
 		"/D/hobbyWorkspace/localmarket/src/models",
 		"/D/hobbyWorkspace/localmarket/src/routes",
-		"/D/hobbyWorkspace/localmarket/src/views"
+		"/D/hobbyWorkspace/localmarket/src/views",
+		"/D/hobbyWorkspace/localmarket/src/views/user"
 	],
 	"file_history":
 	[
-		"/D/hobbyWorkspace/localmarket/server.js",
-		"/D/hobbyWorkspace/localmarket/src/routes/users.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
-		"/C/Users/3clogic/Documents/mongolab.bat",
+		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/displayController.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/services/customerservice.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/services/shopservice.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/partial-items.html",
+		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
+		"/D/hobbyWorkspace/localmarket/src/routes/items.js",
+		"/D/hobbyWorkspace/localmarket/src/routes/vendors.js",
+		"/D/hobbyWorkspace/localmarket/server.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-home.html",
+		"/D/hobbyWorkspace/localmarket/src/models/category.js",
+		"/D/hobbyWorkspace/localmarket/src/models/item.js",
+		"/D/hobbyWorkspace/localmarket/src/routes/users.js",
+		"/C/Users/3clogic/Documents/mongolab.bat",
 		"/D/hobbyWorkspace/localmarket/src/views/user/home.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/authentication.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-profile.html",
-		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
 		"/D/hobbyWorkspace/localmarket/src/models/customer.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/customercontroller.js",
-		"/D/hobbyWorkspace/localmarket/public/js/app/services/customerservice.js",
 		"/C/Users/3clogic/Documents/mongolab.txt",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-list.html",
-		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
 		"/D/hobbyWorkspace/localmarket/src/models/user.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
 		"/D/hobbyWorkspace/localmarket/config/default.json",
@@ -310,7 +318,6 @@
 		"/D/hobbyWorkspace/localmarket/src/views/user/customer.html",
 		"/D/hobbyWorkspace/localmarket/bower.json",
 		"/D/hobbyWorkspace/localmarket/src/models/vendor.js",
-		"/D/hobbyWorkspace/localmarket/src/routes/vendors.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/vendorservice.js",
 		"/C/Users/3clogic/.m2/settings.xml",
 		"/D/patches/translate.patch",
@@ -404,13 +411,7 @@
 		"/C/Users/3clogic/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/Marumeni.html",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/widgets/js/chat.js",
 		"/D/workspace/widgets/js/phone.js",
-		"/C/Users/3clogic/Desktop/chat.js",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/es/WEB-INF/classes/log4j2.xml",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/js/app/controllers/dialPlanController.js",
-		"/C/ProgramData/3CLogic/Users/agent/Configuration/1_localhost;8080;cs;ws;config;ccid=7.xml",
-		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.6.0/5.6.0.001.xml",
-		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.013.xml",
-		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.012.xml"
+		"/C/Users/3clogic/Desktop/chat.js"
 	],
 	"find":
 	{
@@ -528,24 +529,54 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/templates/customers-home.html",
+					"file": "public/js/app/controllers/itemcontroller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 48,
+						"buffer_size": 915,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								40
+								848,
+								848
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/templates/partial-items.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								892,
+								892
 							]
 						],
 						"settings":
@@ -556,111 +587,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/js/app/controllers/displayController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 260,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								254,
-								254
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/js/app/services/customerservice.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 327,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								318,
-								318
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/js/app/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2095,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1894,
-								1894
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 376.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/routes/customers.js",
+					"buffer": 2,
+					"file": "public/js/app/services/shopservice.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 813,
+						"buffer_size": 249,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								549,
-								549
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/routes/items.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								835,
+								835
 							]
 						],
 						"settings":
@@ -669,96 +641,69 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/models/category.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								219,
-								219
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/models/item.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 198,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								190,
-								190
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 376.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "src/models/customer.js",
-					"semi_transient": true,
+					"buffer": 4,
+					"file": "/C/Users/3clogic/workspace/kclDistributor/docker/kube-config.txt",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 302,
+						"buffer_size": 10216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								302,
-								0
+								1849,
+								1849
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 300.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/routes/vendors.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								989,
+								467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
