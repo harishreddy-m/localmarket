@@ -14,6 +14,20 @@
     margin-top: 60px;
 }
 
+.sidemenu {
+  font-family: serif;
+  font-size: x-large;
+}
+
+.rounded {background-color:#CDC4CD; margin-top: 4px}
+.rounded .inner {padding:8px 10px 8px 12px}
+.rounded .c1 {height:1px;line-height:1px;font-size:1px;border-width: 0px 4px 0px 4px;border-color:#FFFFFF;border-style:solid;padding:0px}
+.rounded .c2 {height:1px;line-height:1px;font-size:1px;display:block;border-width: 0px 2px 0px 2px;border-color:#FFFFFF;border-style:solid;padding:0px}
+.rounded .c3 {height:2px;line-height:1px;font-size:1px;display:block;border-width: 0px 1px 0px 1px;border-color:#FFFFFF;border-style:solid;padding:0px}
+
+.mousechange:hover {
+        cursor:pointer;
+    }
 
 	.tab ul {
 		float: left;

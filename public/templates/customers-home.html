@@ -1,1 +1,37 @@
-<div ng-repeat="cat in categories">{{cat}}</div>
+
+<div class="row">  <h1>These are services and goods available for you.</h1>
+</div>
+<div class="row">
+	<div class="col-md-3 page-header">
+		<h2>Categories</h2>
+		<div class="sidemenu" ng-repeat="cat in categories">
+			<div class="mousechange" ng-click="selected($index)"><h2><small> {{cat.name}} </small></h2></div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-9" >
+		<div class="row" >
+  <div class="col-sm-6 col-md-4" ng-repeat="item in items">
+
+					<div class="rounded" >
+						<div class="c1"></div><div class="c2"></div><div class="c3"></div>
+						<div class="inner">
+							<img ng-src="{{item.image}}" alt="image" width="50%" height="50%" />
+								<h3>{{item.name}}</h3>
+								<p>Rs.{{item.price}} </p>
+							<div class="caption">
+							I want this
+								<p><a href="#" class="btn btn-primary" role="button">Daily</a> 
+								<a href="#" class="btn btn-default" role="button">Once</a>
+								<a href="#" class="btn btn-default" role="button">Monthly</a></p>
+							</div>
+						</div>
+						<div class="c3"></div><div class="c2"></div><div class="c1"></div>
+					</div>	
+    </div>
+</div>
+
+	</div>
+</div>

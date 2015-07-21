@@ -4,7 +4,7 @@ var router = express.Router();
 var Vendor = require('../models/vendor');
 var _ = require('underscore');
 var Customer = require('../models/customer');
-
+var Category = require('../models/category');
 
 
 
@@ -26,9 +26,14 @@ router.get("/items",function(req,res){
 					cats=cats.concat(vendor.categories);
 				});
 				cats = _.uniq(cats);
-
-				res.send();
-			});
+				Category.find()
+				.where('name')
+				.in(cats)
+				.populate("items")
+				.exec(function (err, records) {
+    				res.send(records);
+				});				
+		});
 		}
 	});
 });

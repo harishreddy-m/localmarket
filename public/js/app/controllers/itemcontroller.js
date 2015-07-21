@@ -16,7 +16,9 @@ $scope.getItemForcategory = function(){
 		shopService.getItemForCategory($scope.selectedCategory.label).then(function(response){
 			if(response.data!='noitems'){
 				$scope.items[$scope.selectedCategory.value]=response.data;
-			}
+			}else{
+                $scope.items[$scope.selectedCategory.value]=[];
+            }
 	});
 	}
 }

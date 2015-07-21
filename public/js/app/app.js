@@ -39,9 +39,6 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider) {
         }).state('home.customer.display',{
           url:'/display',
           templateUrl : '/templates/customers-home.html',
-          resolve : {promiseObj:  function($http){
-            return $http({method: 'GET', url: '/customer/items'});
-         }},
           controller: 'displayController'
         });
 
@@ -59,7 +56,7 @@ offeringsApp.run(['$rootScope', '$state', 'Authentication', function($rootScope,
       }else{
           if(to.name=='home'&&role=='admin')
           $state.go('home.'+role);
-        else if(to.name=='home'&&role=='customer')
+        else if((to.name=='home' || to.name == 'home.customer') &&role=='customer')
           $state.go('home.customer.display');
       }
          
