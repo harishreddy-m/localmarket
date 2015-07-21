@@ -22,7 +22,10 @@
     <script src="/js/lib/angular-ui-grid/ui-grid.js"></script>
     <script src="/js/app/app.js"></script>
     <script src="/js/app/controllers/customercontroller.js"></script>
+    <script src="/js/app/controllers/displayController.js"></script>
     <script src="/js/app/controllers/vendorcontroller.js"></script>
+    <script src="/js/app/services/authentication.js"></script>
+    <script src="/js/app/services/customerservice.js"></script>
     <script src="/js/app/services/vendorservice.js"></script>
     <!-- endinjector -->
 
@@ -41,7 +44,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <% if (!user.isCustomer) { %>
                         <li><a href="/user/registration">Add User</a></li>
-                        <% } %>
+                        <% }else{%>
+                       <li><a href="#/customer/profile">Profile</a></li>
+                        <%} %>
                         <li><a  href="/logout">Logout</a></li>
                     </ul>
                 </div>

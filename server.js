@@ -58,7 +58,9 @@ dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbCo
     });
 
     app.use(session(
-        {secret:"secret key", store:new MongoStore({mongooseConnection: db})}));
+        {secret:"secret key",resave: true,
+        saveUninitialized: true,
+        store:new MongoStore({mongooseConnection: db})}));
     app.use(express.static(__dirname + '/public'));
     app.use(morgan('dev'));                     // log every request to the console
     app.use(bodyParser.urlencoded({ extended: false }))    // parse application/x-www-form-urlencoded

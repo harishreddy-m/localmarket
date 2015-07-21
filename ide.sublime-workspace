@@ -4,20 +4,52 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"req"
+			],
+			[
+				"cus",
+				"customerService"
+			],
+			[
+				"pro",
+				"profile"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"cu",
+				"customerController"
+			],
+			[
+				"te",
+				"templates"
+			],
+			[
+				"templ",
+				"templateUrl"
+			],
+			[
+				"pr",
+				"profile"
+			],
+			[
+				"p",
+				"promiseObj"
+			],
+			[
+				"ve",
+				"vendor"
+			],
+			[
 				"con",
 				"controller"
 			],
 			[
 				"st",
 				"style	Attr"
-			],
-			[
-				"te",
-				"templateUrl"
-			],
-			[
-				"re",
-				"redirect"
 			],
 			[
 				"se",
@@ -30,10 +62,6 @@
 			[
 				"e",
 				"err"
-			],
-			[
-				"ve",
-				"vendorsIds"
 			],
 			[
 				"gr",
@@ -70,10 +98,6 @@
 			[
 				"vendo",
 				"vendor"
-			],
-			[
-				"fo",
-				"formData"
 			],
 			[
 				"co",
@@ -116,6 +140,62 @@
 	"buffers":
 	[
 		{
+			"file": "public/templates/customers-home.html",
+			"settings":
+			{
+				"buffer_size": 19,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/views/user/home.html",
+			"settings":
+			{
+				"buffer_size": 2784,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/app/app.js",
+			"settings":
+			{
+				"buffer_size": 1652,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/app/services/authentication.js",
+			"settings":
+			{
+				"buffer_size": 160,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/templates/customers-profile.html",
+			"settings":
+			{
+				"buffer_size": 442,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/routes/customers.js",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/routes/users.js",
+			"settings":
+			{
+				"buffer_size": 1750,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "server.js",
 			"settings":
 			{
@@ -124,43 +204,36 @@
 			}
 		},
 		{
-			"file": "public/js/app/app.js",
+			"file": "src/models/customer.js",
 			"settings":
 			{
-				"buffer_size": 1505,
+				"buffer_size": 302,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/models/user.js",
+			"file": "public/js/app/controllers/customercontroller.js",
 			"settings":
 			{
-				"buffer_size": 373,
+				"buffer_size": 330,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/templates/admin-home.html",
+			"file": "public/js/app/services/customerservice.js",
 			"settings":
 			{
-				"buffer_size": 285,
+				"buffer_size": 255,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/templates/partial-vendors.html",
+			"file": "/C/Users/3clogic/Documents/mongolab.txt",
 			"settings":
 			{
-				"buffer_size": 637,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config/default.json",
-			"settings":
-			{
-				"buffer_size": 151,
-				"line_ending": "Windows"
+				"buffer_size": 110,
+				"line_ending": "Windows",
+				"name": "C:\\Program Files\\MongoDB\\Server\\3.0\\bin\\mongo mong"
 			}
 		}
 	],
@@ -196,7 +269,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 912.0
+		"width": 549.0
 	},
 	"console":
 	{
@@ -218,12 +291,8 @@
 	"expanded_folders":
 	[
 		"/D/hobbyWorkspace/localmarket",
-		"/D/hobbyWorkspace/localmarket/.openshift/action_hooks",
 		"/D/hobbyWorkspace/localmarket/config",
 		"/D/hobbyWorkspace/localmarket/public",
-		"/D/hobbyWorkspace/localmarket/public/css",
-		"/D/hobbyWorkspace/localmarket/public/data",
-		"/D/hobbyWorkspace/localmarket/public/img",
 		"/D/hobbyWorkspace/localmarket/public/js",
 		"/D/hobbyWorkspace/localmarket/public/js/app",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers",
@@ -232,29 +301,30 @@
 		"/D/hobbyWorkspace/localmarket/src",
 		"/D/hobbyWorkspace/localmarket/src/models",
 		"/D/hobbyWorkspace/localmarket/src/routes",
-		"/D/hobbyWorkspace/localmarket/src/views",
-		"/D/hobbyWorkspace/localmarket/src/views/user"
+		"/D/hobbyWorkspace/localmarket/src/views"
 	],
 	"file_history":
 	[
+		"/D/hobbyWorkspace/localmarket/public/templates/customers-list.html",
+		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
+		"/D/hobbyWorkspace/localmarket/server.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
+		"/D/hobbyWorkspace/localmarket/src/models/user.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
+		"/D/hobbyWorkspace/localmarket/config/default.json",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-home.html",
 		"/D/hobbyWorkspace/localmarket/src/views/user/home.html",
 		"/D/hobbyWorkspace/localmarket/src/routes/users.js",
-		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
-		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
 		"/D/hobbyWorkspace/localmarket/src/views/index.html",
 		"/D/.gitignore",
 		"/D/hobbyWorkspace/localmarket/.gitignore",
 		"/D/hobbyWorkspace/localmarket/public/css/site.css",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/customercontroller.js",
-		"/D/hobbyWorkspace/localmarket/server.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/vendorcontroller.js",
 		"/D/hobbyWorkspace/localmarket/src/views/user/registration.html",
-		"/D/hobbyWorkspace/localmarket/src/models/user.js",
 		"/D/hobbyWorkspace/localmarket/src/views/user/customer.html",
 		"/D/hobbyWorkspace/localmarket/bower.json",
-		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
 		"/D/hobbyWorkspace/localmarket/src/models/vendor.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/vendors.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/vendorservice.js",
@@ -274,7 +344,6 @@
 		"/C/Users/3clogic/workspace/portal6/ls_trunk/install.txt",
 		"/C/Users/3clogic/workspace/portal6/ls_trunk/.bowerrc",
 		"/D/hobbyWorkspace/localmarket/.bowerrc",
-		"/D/hobbyWorkspace/localmarket/config/default.json",
 		"/C/Users/3clogic/AppData/Local/Microsoft/Windows/INetCache/IE/G52CCV1I/WhatsApp_chat_with_Swathi_reddy[1].txt",
 		"/D/hobbyWorkspace/localmarket/app/views/user/registration.html",
 		"/D/hobbyWorkspace/localmarket/app/js/app.js",
@@ -363,8 +432,7 @@
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/js/app/controllers/callcenterController.js",
 		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.015.xml",
 		"/C/Users/3clogic/workspace/ms_trunk/src/main/resources/sql/mysql/upgrade/cc/5.4.0/5.4.0.005.xml",
-		"/C/Users/3clogic/Desktop/dialPlan.html",
-		"/C/Users/3clogic/Desktop/dialPlanController.js"
+		"/C/Users/3clogic/Desktop/dialPlan.html"
 	],
 	"find":
 	{
@@ -382,6 +450,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"       \n",
 			");\n",
 			" ;",
 			"list",
@@ -481,54 +550,83 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server.js",
+					"file": "public/templates/customers-home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3602,
+						"buffer_size": 19,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3602,
-								3602
+								12,
+								12
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1856.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "public/js/app/app.js",
+					"file": "src/views/user/home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1505,
+						"buffer_size": 2784,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1226,
-								1226
+								2274,
+								2274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 516.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/app/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1431,
+								1431
 							]
 						],
 						"settings":
@@ -538,6 +636,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/js/app/services/authentication.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -545,24 +672,49 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/models/user.js",
+					"buffer": 4,
+					"file": "public/templates/customers-profile.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 373,
+						"buffer_size": 442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								188,
-								188
-							],
+								130,
+								130
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/routes/customers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								189,
-								189
+								625,
+								625
 							]
 						],
 						"settings":
@@ -573,91 +725,182 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/templates/admin-home.html",
+					"buffer": 6,
+					"file": "src/routes/users.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 285,
+						"buffer_size": 1750,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								218,
-								218
+								1587,
+								1587
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "public/templates/partial-vendors.html",
+					"buffer": 8,
+					"file": "src/models/customer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 637,
+						"buffer_size": 302,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								549,
-								549
+								291,
+								291
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "config/default.json",
+					"buffer": 9,
+					"file": "public/js/app/controllers/customercontroller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 151,
+						"buffer_size": 330,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76,
-								76
+								139,
+								139
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "public/js/app/services/customerservice.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								0
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/Users/3clogic/Documents/mongolab.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"auto_name": "C:\\Program Files\\MongoDB\\Server\\3.0\\bin\\mongo mong",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
