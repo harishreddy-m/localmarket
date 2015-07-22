@@ -1,2 +1,3 @@
-/public/data/*
+public/data/*.jpg
+public/data/*.png
 /node_modules
