@@ -1,4 +1,11 @@
+<div ng-if="categories.length==0">
 
+<div class="row">  <h1>NO services and goods are available in your locality as of now.<small>Are you sure your <a href="#/customer/profile">pincode</a> is correct?</small></h1>
+</div>	
+
+</div>
+
+<div ng-if="categories.length>0">
 <div class="row">  <h1>These are services and goods available for you.</h1>
 </div>
 <div class="row">
@@ -34,4 +41,6 @@
 </div>
 
 	</div>
+</div>
+
 </div>

@@ -10,7 +10,7 @@
 
 <div class="col-md-8">
 	<div class="row"><a class="btn btn-primary" ng-click="addItems()">Add Items</a></div><br/>
-	<div ng-if='!items[selectedCategory.value] && !adding' >No Items in this category</div>
+	<div ng-if='items[selectedCategory.value].length==0 && !adding' >No Items in this category</div>
 	<div ng-hide='adding' ng-repeat='item in items[selectedCategory.value]'>
 		<p>{{item.name}} - {{item.price}}</p>
 	</div>
