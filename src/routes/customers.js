@@ -6,12 +6,30 @@ var _ = require('underscore');
 var Customer = require('../models/customer');
 var Category = require('../models/category');
 
+var Order = require('../models/order');
+
 
 
 router.post("/profile",function(req,res){
 	Customer.findOneAndUpdate({whois:req.session.user._id}, {pincode:req.body.pincode}, function(err) {
 		if(!err)
 			res.send("success");
+	});
+});
+
+router.post("/buy",function(req,res){
+	var order = new Order(req.body);
+	order.save(function(err){
+		if(!err){
+			Customer.findOneAndUpdate({whois:req.session.user._id}, {$push:{"orders":order}}, function(err) {
+				if(!err)
+					res.send("success");
+				else{
+					console.log(err);
+					res.send(500);
+				}
+			});
+		}
 	});
 });
 
@@ -31,9 +49,9 @@ router.get("/items",function(req,res){
 				.in(cats)
 				.populate("items")
 				.exec(function (err, records) {
-    				res.send(records);
+					res.send(records);
 				});				
-		});
+			});
 		}
 	});
 });

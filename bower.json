@@ -14,7 +14,8 @@
     "components-font-awesome": "latest",
     "angular-ui-grid": "3.*",
     "ng-file-upload":"latest",
-    "ng-file-upload-shim":"latest"
+    "ng-file-upload-shim":"latest",
+    "ngDialog":"*"
   },
   "resolutions": {
     "angular": "1.4.2",

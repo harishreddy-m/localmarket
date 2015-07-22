@@ -3,9 +3,16 @@
 *
 */
 
-var offeringsApp = angular.module('offeringsApp', ['ui.router','angularFileUpload','angular-growl','ui.grid','ui.grid.resizeColumns', 'ui.grid.selection','ngFileUpload']);
+var offeringsApp = angular.module('offeringsApp', ['ui.router','angularFileUpload','angular-growl','ui.grid','ui.grid.resizeColumns', 'ui.grid.selection','ngFileUpload','ngDialog']);
 
-offeringsApp.config(function($stateProvider, $urlRouterProvider) {
+offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider) {
+
+  ngDialogProvider.setDefaults({
+    className: 'ngdialog-theme-default',
+    showClose: true,
+    closeByDocument: true,
+    closeByEscape: true
+  });
 
   $urlRouterProvider.otherwise('/');
 
@@ -38,9 +45,16 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider) {
           templateUrl : '/templates/customers-profile.html'
         }).state('home.customer.display',{
           url:'/display',
-          templateUrl : '/templates/customers-home.html',
-          controller: 'displayController'
-        });
+          resolve:{
+             promiseData : function($http){
+             return $http.get('/customer/items').then(function(response){
+              return response.data; 
+            });
+           }
+         },
+           templateUrl : '/templates/customers-home.html',
+           controller: 'displayController'
+         });
 
       }); 
 
@@ -54,12 +68,12 @@ offeringsApp.run(['$rootScope', '$state', 'Authentication', function($rootScope,
       }else if (to.name.indexOf('customer') >=0 && role !== 'customer') {
         e.preventDefault();
       }else{
-          if(to.name=='home'&&role=='admin')
+        if(to.name=='home'&&role=='admin')
           $state.go('home.'+role);
         else if((to.name=='home' || to.name == 'home.customer') &&role=='customer')
           $state.go('home.customer.display');
       }
-         
+
     });
   });
 }]);
