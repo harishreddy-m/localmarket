@@ -8,11 +8,19 @@ $scope.selected = function(i){
 $scope.items = $scope.categories[i].items;
 }
 
-$scope.addDaily = function(itemId){
+$scope.quantity='1 litre'
+
+$scope.selectedTab='make';
+
+$scope.addDaily = function(item){
+	$scope.selectedItem = item;
 	action = ngDialog.openConfirm({template: '/templates/popup-daily.html',
     scope: $scope});
     action.then(function(ok){
-    	customerService.buy(itemId,'daily');
+    	customerService.buy(item._id,'daily',$scope.quantity).then(function(){
+    		growl.success('Added to your orders',{ttl:5000})
+    		$scope.selectedTab='existing';
+    	});
     },function(no){
     console.log(no);	
     });

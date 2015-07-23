@@ -52,7 +52,7 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider
             });
            }
          },
-           templateUrl : '/templates/customers-home.html',
+           templateUrl : '/templates/customers-list.html',
            controller: 'displayController'
          });
 

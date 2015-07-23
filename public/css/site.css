@@ -19,6 +19,15 @@
   font-size: x-large;
 }
 
+ .imgContainer{
+  overflow:hidden;
+ 
+  }
+  .imgContainer img{
+  width:200px;
+  height:120px; 
+  }
+
 .rounded {background-color:#CDC4CD; margin-top: 4px}
 .rounded .inner {padding:8px 10px 8px 12px}
 .rounded .c1 {height:1px;line-height:1px;font-size:1px;border-width: 0px 4px 0px 4px;border-color:#FFFFFF;border-style:solid;padding:0px}

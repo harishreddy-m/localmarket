@@ -2,38 +2,71 @@
 <div class="row" style="margin-top: 2%">
 	
 	<ul class="tab">
-		<li class="tab" ng-class="{tabactive:selectedTab==='scheduled'}"> 
-			<a href class="tab" ng-click="selectedTab = 'scheduled'">Recurring Goods & Services</a>	
+		<li class="tab" ng-class="{tabactive:selectedTab==='make'}"> 
+			<a href class="tab" ng-click="selectedTab = 'make'">Make an order</a>	
 		</li>
-		<li clas="tab" ng-class="{tabactive:selectedTab==='onetime'}"> 
-			<a href class="tab" ng-click="selectedTab = 'onetime'">One time Goods & Services</a> 
+		<li clas="tab" ng-class="{tabactive:selectedTab==='existing'}"> 
+			<a href class="tab" ng-click="selectedTab = 'existing'">My orders</a> 
 		</li>
 	</ul>	
 </div>
 
 
 <div class="row" style="margin-top: 2%">
-	<div class="tab" ng-show="selectedTab === 'scheduled'">
-		<div class="col-md-8" style="border:2px solid #644a43;height:60vh;">
-			<div>Your scheduled goods and services are these...</div>
 
+	<div class="tab" ng-show="selectedTab === 'make'">
+		<div ng-if="categories.length==0">
+
+<div class="row">  <h1>NO services and goods are available in your locality as of now.<small>Are you sure your <a href="#/customer/profile">pincode</a> is correct?</small></h1>
+</div>	
+
+</div>
+
+<div ng-if="categories.length>0">
+<div class="row">  <h1>These are services and goods available for you.</h1>
+</div>
+<div class="row">
+	
+</div>
+<div class="row">
+	<div class="col-md-3 page-header">
+		<h2>Categories</h2>
+		<div class="sidemenu" ng-repeat="cat in categories">
+			<div class="mousechange" ng-click="selected($index)"><h2><small> {{cat.name}} </small></h2></div>
 		</div>
-		<div class="col-md-4" style="min-height:100%">
-			Schedule an item or service
-			<div>Form with frequency goes here</div>
-		</div>
+	</div>
+	<div class="col-md-9" >
+		<div class="row" >
+  <div class="col-sm-6 col-md-4" ng-repeat="item in items">
+
+					<div class="rounded" >
+						<div class="c1"></div><div class="c2"></div><div class="c3"></div>
+						<div class="inner imgContainer">
+							<img ng-src="{{item.image}}" alt="image"/>
+								<h3 style="font-family:serif;">{{item.name}}</h3><p class="pull-right" ><span class="badge" style="font-family: 'Tangerine', serif;font-size: 24px;">Rs.{{item.price}}</span> </p>
+								<br/>
+							<div class="caption">
+							I want this
+								<p><a href="" ng-click="addDaily(item)" class="btn btn-primary" role="button">Daily</a> 
+								<a href="" ng-click="addOnce(item)" class="btn btn-default" role="button">Once</a>
+								<a href="" ng-click="addMonthly(item)" class="btn btn-default" role="button">Monthly</a></p>
+							</div>
+						</div>
+						<div class="c3"></div><div class="c2"></div><div class="c1"></div>
+					</div>	
+    </div>
+</div>
+
+	</div>
+</div>
+
+</div>
 	</div>
 
 
 
-	<div class="tab" ng-show="selectedTab === 'onetime'">
-		<div class="col-md-8" style="border:2px solid #644a43;height:60vh;">
-			Your one time goods and services will be supplied on these dates.
-		</div>
-
-		<div class="col-md-4" style="min-height:100%">
-			Add an item or service to get on specified date
-			<div>Form with date goes here</div>
-		</div>
+	<div class="tab" ng-show="selectedTab === 'existing'">
+		
+     implementin soon
 
 	</div>
