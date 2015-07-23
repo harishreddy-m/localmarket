@@ -3,7 +3,7 @@
 *
 */
 
-var offeringsApp = angular.module('offeringsApp', ['ui.router','720kb.datepicker','angularFileUpload','angular-growl','ui.grid','ui.grid.resizeColumns', 'ui.grid.selection','ngFileUpload','ngDialog']);
+var offeringsApp = angular.module('offeringsApp', ['ui.router','720kb.datepicker','angularFileUpload','angular-growl','ui.grid','ui.grid.resizeColumns', 'ui.grid.selection','ngFileUpload','ngDialog','ngUnderscore']);
 
 offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider) {
 

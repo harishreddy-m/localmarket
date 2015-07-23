@@ -5,7 +5,7 @@ var Vendor = require('../models/vendor');
 var _ = require('underscore');
 var Customer = require('../models/customer');
 var Category = require('../models/category');
-
+var Item = require('../models/item');
 var Order = require('../models/order');
 
 
@@ -55,5 +55,33 @@ router.get("/items",function(req,res){
 		}
 	});
 });
+
+router.get("/orders",function(req,res){
+	Customer.findOne({whois:req.session.user._id}).select("orders").populate("orders").exec(function(error,customer){
+
+		if(error)
+			console.log(error);
+		else{
+			Item.populate(customer, { path: 'orders.item' },function(){
+				res.send(customer.orders);
+			});
+		}
+	});
+});
+
+router.post("/delete",function(req,res){
+	Customer.findOne({whois:req.session.user._id}).select("orders").exec(function(error,customer){
+
+		if(error)
+			console.log(error);
+		else{
+			customer.orders.pull({_id:req.body.orderId});
+			customer.save(function(){
+					res.send(200);
+			});			
+		};
+	});
+});
+
 
 module.exports = router;

@@ -4,7 +4,7 @@
   "dependencies": {
     "angular": "latest",
     "ui-router": "latest",
-    "lodash": "latest",
+    "ng-underscore": "latest",
     "bootstrap-css-only": "latest",
     "angular-local-storage": "latest",
     "angular-file-upload": "latest",
@@ -19,7 +19,6 @@
     "angularjs-datepicker":"*"
   },
   "resolutions": {
-    "angular": "1.4.2",
-    "angular-animate": "1.3.10"
-  }
+    "angular": "1.4.2"
+ }
 }

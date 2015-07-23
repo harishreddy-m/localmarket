@@ -1,8 +1,45 @@
 
  <div class="dialog-contents" >
     <h2>Confirm order for {{selectedItem.name}}?</h2><hr/> 
-     Quantity : <input type="text" ng-model="quantity"></input>
+    <div class="form-group">
+   <label for="quant" class="control-label"> Quantity :</label> <input class="form-control" id="quant" type="text" ng-model="quantity"></input>
+       <label for="day" class="control-label"> When :</label> 
+    <select ng-model="day">
+  <option value="1">1 st</option>
+  <option value="2">2 nd </option>
+  <option value="3">3 rd</option>
+  <option value="4">4 th</option>
+  <option value="5">5 th</option>
+  <option value="6">6 th</option>
+  <option value="7">7 th</option>
+  <option value="8">8 th</option>
+  <option value="9">9 th</option>
+  <option value="10">10 th</option>
+  <option value="11">11 th</option>
+  <option value="12">12 th</option>
+  <option value="13">13 th</option>
+  <option value="14">14 th</option>
+  <option value="15">15 th</option>
+  <option value="16">16 th</option>
+  <option value="17">17 th</option>
+  <option value="18">18 th</option>
+  <option value="19">19 th</option>
+  <option value="20">20 th</option>
+  <option value="21">21 st</option>
+  <option value="22">22 nd</option>
+  <option value="23">23 rd</option>
+  <option value="24">24 th</option>
+  <option value="25">25 th</option>
+  <option value="26">26 th</option>
+  <option value="27">27 th</option>
+  <option value="28">28 th</option>
+  <option value="29">29 th</option>
+  <option value="30">30 th</option>
+</select> 
+
+day of every month
+    </div>
     <hr/>
     <button ng-click="closeThisDialog()">Cancel</button>
-    <button class="pull-right" ng-click="confirm()">Confirm</button>
+    <button class="pull-right" ng-click="confirm({day:day,quantity:quantity})">Confirm</button>
 </div>

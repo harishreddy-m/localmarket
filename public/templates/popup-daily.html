@@ -4,5 +4,5 @@
    <label for="quant"> Quantity :</label> <input id="quant" type="text" ng-model="quantity"></input>
     <hr/>
     <button ng-click="closeThisDialog()">Cancel</button>
-    <button class="pull-right" ng-click="confirm()">Confirm</button>
+    <button class="pull-right" ng-click="confirm({quantity:quantity})">Confirm</button>
 </div>

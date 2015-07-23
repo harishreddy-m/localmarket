@@ -1,0 +1,39 @@
+{
+  "name": "ng-underscore",
+  "version": "0.1.0",
+  "description": "An Angular wrapper for Underscore",
+  "author": [
+    "Nick White <nickswhite89@gmail.com> (http://toxicd.co.uk)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ngunderscore",
+    "angular",
+    "underscore"
+  ],
+  "ignore": [
+    "test",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitignore",
+    ".jscsrc",
+    ".jshintrc",
+    ".travis.yml",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nwhite89/ng-underscore.git"
+  },
+  "main": [
+    "build/ng-underscore.js"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0"
+  }
+}

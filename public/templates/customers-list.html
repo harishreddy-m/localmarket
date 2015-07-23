@@ -6,7 +6,7 @@
 			<a href class="tab" ng-click="selectedTab = 'make'">Make an order</a>	
 		</li>
 		<li clas="tab" ng-class="{tabactive:selectedTab==='existing'}"> 
-			<a href class="tab" ng-click="selectedTab = 'existing'">My orders</a> 
+			<a href class="tab" ng-click="selectedTab = 'existing';fetchOrders();">My orders</a> 
 		</li>
 	</ul>	
 </div>
@@ -17,56 +17,79 @@
 	<div class="tab" ng-show="selectedTab === 'make'">
 		<div ng-if="categories.length==0">
 
-<div class="row">  <h1>NO services and goods are available in your locality as of now.<small>Are you sure your <a href="#/customer/profile">pincode</a> is correct?</small></h1>
-</div>	
+			<div class="row">  <h1>NO services and goods are available in your locality as of now.<small>Are you sure your <a href="#/customer/profile">pincode</a> is correct?</small></h1>
+			</div>	
 
-</div>
-
-<div ng-if="categories.length>0">
-<div class="row">  <h1>These are services and goods available for you.</h1>
-</div>
-<div class="row">
-	
-</div>
-<div class="row">
-	<div data-spy="affix" class="col-md-3 page-header">
-		<h2>Categories</h2>
-		<div class="sidemenu" ng-repeat="cat in categories">
-			<div class="mousechange" ng-click="selected($index)"><h2><small> {{cat.name}} </small></h2></div>
 		</div>
-	</div>
-	<div class="col-md-9" >
-		<div class="row" >
-  <div class="col-sm-6 col-md-4" ng-repeat="item in items">
 
-					<div class="rounded" >
-						<div class="c1"></div><div class="c2"></div><div class="c3"></div>
-						<div class="inner imgContainer">
-							<img ng-src="{{item.image}}" alt="image"/>
-								<h3 style="font-family:serif;">{{item.name}}</h3><p class="pull-right" ><span class="badge" style="font-family: 'Tangerine', serif;font-size: 24px;">Rs.{{item.price}}</span> </p>
-								<br/>
-							<div class="caption">
-							I want this
-								<p><a href="" ng-click="add(item,'daily')" class="btn btn-primary" role="button">Daily</a> 
-								<a href="" ng-click="add(item,'once')" class="btn btn-default" role="button">Once</a>
-								<a href="" ng-click="add(item,'monthly')" class="btn btn-default" role="button">Monthly</a></p>
+		<div ng-if="categories.length>0">
+			<div class="row">  <h1>These are services and goods available for you.</h1>
+			</div>
+			<div class="row">
+
+			</div>
+			<div class="row">
+				<div data-spy="affix" class="col-md-3 page-header">
+					<h2>Categories</h2>
+					<div class="sidemenu" ng-repeat="cat in categories">
+						<div class="mousechange" ng-click="selected($index)"><h2><small> {{cat.name}} </small></h2></div>
+					</div>
+				</div>
+				<div class="col-md-9" >
+					<div class="row" >
+						<div class="col-sm-6 col-md-4" ng-repeat="item in items">
+
+							<div class="rounded" >
+								<div class="c1"></div><div class="c2"></div><div class="c3"></div>
+								<div class="inner imgContainer">
+									<img ng-src="{{item.image}}" alt="image"/>
+									<h3 style="font-family:serif;">{{item.name}}</h3><p class="pull-right" ><span class="badge" style="font-family: 'Tangerine', serif;font-size: 24px;">Rs.{{item.price}}</span> </p>
+									<br/>
+									<div class="caption">
+										I want this
+										<p><a href="" ng-click="add(item,'daily')" class="btn btn-primary" role="button">Daily</a> 
+											<a href="" ng-click="add(item,'once')" class="btn btn-default" role="button">Once</a>
+											<a href="" ng-click="add(item,'monthly')" class="btn btn-default" role="button">Monthly</a></p>
+										</div>
+									</div>
+									<div class="c3"></div><div class="c2"></div><div class="c1"></div>
+								</div>	
 							</div>
 						</div>
-						<div class="c3"></div><div class="c2"></div><div class="c1"></div>
-					</div>	
-    </div>
-</div>
 
-	</div>
-</div>
+					</div>
+				</div>
 
-</div>
-	</div>
+			</div>
+		</div>
 
 
 
-	<div class="tab" ng-show="selectedTab === 'existing'">
-		
-     implementin soon
+		<div class="tab" ng-show="selectedTab === 'existing'">
+			<div class="row">
+							<div class="col-md-2">Name</div>
+							<div class="col-md-2">Price</div>
+							<div class="col-md-2">Quantity</div>
+							<div class="col-md-2"></div>
+							<div class="col-md-2"></div>
+							<div class="col-md-2"></div> 
+						</div>
+			<div ng-repeat="order in existingOrders">
+				<div class="rounded" >
+					<div class="c1"></div><div class="c2"></div><div class="c3"></div>
+					<div class="inner">
+						<div class="row">
+							<div class="col-md-2">{{order.item.name}}</div>
+							<div class="col-md-2">Rs.{{order.item.price}}</div>
+							<div class="col-md-2">{{order.quantity}}</div>
+							<div class="col-md-2"> {{order.frequency}}</div>
+							<div class="col-md-2"></div>
+							<div class="col-md-2"><a href="" ng-click="deleteOrder(order)" class="btn btn-danger" role="button">Delete</a></div> 
+						</div>
+					</div>
+					<div class="c3"></div><div class="c2"></div><div class="c1"></div>
+				</div>
 
-	</div>
+			</div>
+
+		</div>

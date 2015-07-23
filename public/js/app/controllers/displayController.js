@@ -1,4 +1,4 @@
-angular.module('offeringsApp').controller('displayController',['$scope','promiseData','customerService','growl','ngDialog',function($scope,promiseData,customerService,growl,ngDialog){
+angular.module('offeringsApp').controller('displayController',['$scope','promiseData','customerService','growl','ngDialog','underscore',function($scope,promiseData,customerService,growl,ngDialog,_){
 
 $scope.categories = promiseData;
 if($scope.categories.length>0)
@@ -23,21 +23,17 @@ $scope.add = function(itemselected,freq){
     	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity};
     	customerService.buy(order).then(function(){
     			growl.success('Added to your orders',{ttl:5000})
-    			$scope.selectedTab='existing';
     		});
     	}else if(freq=='once'){
 	    	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity,deliverydate:ok.date};
     		customerService.buy(order).then(function(){
     			growl.success('Added to your orders',{ttl:5000})
-    			$scope.selectedTab='existing';
     		});
     	}else if(freq=='monthly'){
-	    	order = {item:itemselected._id,frequency:freq,quantity:$scope.quantity,deliveryday:$scope.day};
+	    	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity,deliveryday:ok.day};
     		customerService.buy(order).then(function(){
     			growl.success('Added to your orders',{ttl:5000})
-    			$scope.selectedTab='existing';
     		});
-
     	}
     },function(no){
     console.log(no);	
@@ -46,5 +42,20 @@ $scope.add = function(itemselected,freq){
 
 $scope.date='';
 $scope.day='';
+
+$scope.fetchOrders=function(){
+customerService.getExistingOrders().then(function(data){
+    $scope.existingOrders = data;
+});
+}
+
+$scope.deleteOrder=function(order){
+customerService.deleteOrder(order._id).then(function(data){
+    growl.success("Deleted!",{ttl:5000});
+    $scope.existingOrders=_.without($scope.existingOrders,order);
+});
+}
+
+$scope.existingOrders = [];
 
 }]);
