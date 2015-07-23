@@ -15,7 +15,8 @@
     "angular-ui-grid": "3.*",
     "ng-file-upload":"latest",
     "ng-file-upload-shim":"latest",
-    "ngDialog":"*"
+    "ngDialog":"*",
+    "angularjs-datepicker":"*"
   },
   "resolutions": {
     "angular": "1.4.2",

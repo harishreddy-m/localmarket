@@ -29,7 +29,7 @@
 	
 </div>
 <div class="row">
-	<div class="col-md-3 page-header">
+	<div data-spy="affix" class="col-md-3 page-header">
 		<h2>Categories</h2>
 		<div class="sidemenu" ng-repeat="cat in categories">
 			<div class="mousechange" ng-click="selected($index)"><h2><small> {{cat.name}} </small></h2></div>
@@ -47,9 +47,9 @@
 								<br/>
 							<div class="caption">
 							I want this
-								<p><a href="" ng-click="addDaily(item)" class="btn btn-primary" role="button">Daily</a> 
-								<a href="" ng-click="addOnce(item)" class="btn btn-default" role="button">Once</a>
-								<a href="" ng-click="addMonthly(item)" class="btn btn-default" role="button">Monthly</a></p>
+								<p><a href="" ng-click="add(item,'daily')" class="btn btn-primary" role="button">Daily</a> 
+								<a href="" ng-click="add(item,'once')" class="btn btn-default" role="button">Once</a>
+								<a href="" ng-click="add(item,'monthly')" class="btn btn-default" role="button">Monthly</a></p>
 							</div>
 						</div>
 						<div class="c3"></div><div class="c2"></div><div class="c1"></div>

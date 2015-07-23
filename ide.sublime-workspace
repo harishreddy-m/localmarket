@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"selectedTab"
+			],
+			[
 				"Or",
 				"OrderSchema"
 			],
@@ -66,10 +70,6 @@
 			[
 				"c",
 				"category"
-			],
-			[
-				"se",
-				"send"
 			],
 			[
 				"get",
@@ -207,15 +207,23 @@
 			"file": "public/js/app/controllers/displayController.js",
 			"settings":
 			{
-				"buffer_size": 635,
+				"buffer_size": 852,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/routes/customers.js",
+			"file": "public/templates/customers-list.html",
 			"settings":
 			{
-				"buffer_size": 1370,
+				"buffer_size": 2183,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/models/order.js",
+			"settings":
+			{
+				"buffer_size": 369,
 				"line_ending": "Windows"
 			}
 		}
@@ -273,13 +281,12 @@
 	},
 	"expanded_folders":
 	[
-		"/D/hobbyWorkspace/localmarket",
 		"/D/hobbyWorkspace/localmarket/public",
 		"/D/hobbyWorkspace/localmarket/public/css",
+		"/D/hobbyWorkspace/localmarket/public/js",
 		"/D/hobbyWorkspace/localmarket/public/js/app",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services",
-		"/D/hobbyWorkspace/localmarket/public/js/lib",
 		"/D/hobbyWorkspace/localmarket/public/templates",
 		"/D/hobbyWorkspace/localmarket/src",
 		"/D/hobbyWorkspace/localmarket/src/models",
@@ -287,23 +294,24 @@
 	],
 	"file_history":
 	[
-		"/D/hobbyWorkspace/localmarket/public/js/app/services/customerservice.js",
-		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
-		"/D/hobbyWorkspace/localmarket/src/models/customer.js",
-		"/D/hobbyWorkspace/localmarket/src/models/order.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/customers-list.html",
 		"/D/hobbyWorkspace/localmarket/public/templates/popup-daily.html",
-		"/D/hobbyWorkspace/localmarket/public/templates/customers-home.html",
+		"/D/hobbyWorkspace/localmarket/src/models/order.js",
+		"/D/hobbyWorkspace/localmarket/public/css/site.css",
 		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
+		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/displayController.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/services/customerservice.js",
+		"/D/hobbyWorkspace/localmarket/src/models/customer.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/customers-home.html",
 		"/D/hobbyWorkspace/localmarket/src/models/item.js",
 		"/D/hobbyWorkspace/localmarket/bower.json",
 		"/D/hobbyWorkspace/localmarket/.gitignore",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-items.html",
 		"/D/hobbyWorkspace/localmarket/src/views/index.html",
 		"/D/hobbyWorkspace/localmarket/src/views/user/home.html",
-		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/displayController.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/itemcontroller.js",
 		"/D/hobbyWorkspace/localmarket/config/default.json",
-		"/D/hobbyWorkspace/localmarket/public/css/site.css",
 		"/D/hobbyWorkspace/localmarket/src/routes/items.js",
 		"/D/hobbyWorkspace/localmarket/package.json",
 		"/D/hobbyWorkspace/localmarket/src/models/category.js",
@@ -318,7 +326,6 @@
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-profile.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/customercontroller.js",
 		"/C/Users/3clogic/Documents/mongolab.txt",
-		"/D/hobbyWorkspace/localmarket/public/templates/customers-list.html",
 		"/D/hobbyWorkspace/localmarket/src/models/user.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
 		"/D/.gitignore",
@@ -432,6 +439,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"onetime",
+			"scheduled",
 			"       \n",
 			");\n",
 			" ;",
@@ -518,6 +527,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"existing",
+			"make",
 			"",
 			"router.",
 			"",
@@ -541,15 +552,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 635,
+						"buffer_size": 852,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
+								387,
+								387
 							]
 						],
 						"settings":
@@ -557,7 +568,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": -0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -565,31 +576,59 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/routes/customers.js",
+					"file": "public/templates/customers-list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1370,
+						"buffer_size": 2183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								788,
-								788
+								1092,
+								1092
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 556.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/models/order.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								240,
+								240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

@@ -1,0 +1,14 @@
+
+ <div class="dialog-contents" >
+    <h2>Confirm order for {{selectedItem.name}}?</h2><hr/> 
+    <div class="form-group">
+   <label for="quant" class="control-label"> Quantity :</label> <input class="form-control" id="quant" type="text" ng-model="quantity"></input>
+       <label for="date" class="control-label"> When :</label> 
+    <datepicker date-format="EEEE, MMMM d, y" button-prev="<i class='fa fa-arrow-left'></i>" button-next="<i class='fa fa-arrow-right'></i>">
+  <input ng-model="date" class="form-control" id='date' type="text" place-holder="Pick a date" />
+</datepicker>
+    </div>
+    <hr/>
+    <button ng-click="closeThisDialog()">Cancel</button>
+    <button class="pull-right" ng-click="confirm({date:date,quantity:quantity})">Confirm</button>
+</div>

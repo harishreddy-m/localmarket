@@ -12,20 +12,39 @@ $scope.quantity='1 litre'
 
 $scope.selectedTab='make';
 
-$scope.addDaily = function(item){
-	$scope.selectedItem = item;
-	action = ngDialog.openConfirm({template: '/templates/popup-daily.html',
+$scope.add = function(itemselected,freq){
+	$scope.selectedItem = itemselected;
+	action = ngDialog.openConfirm({template: '/templates/popup-'+freq+'.html',
     scope: $scope});
+
     action.then(function(ok){
-    	customerService.buy(item._id,'daily',$scope.quantity).then(function(){
-    		growl.success('Added to your orders',{ttl:5000})
-    		$scope.selectedTab='existing';
-    	});
+    	var order = {};
+    	if(freq=='daily'){
+    	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity};
+    	customerService.buy(order).then(function(){
+    			growl.success('Added to your orders',{ttl:5000})
+    			$scope.selectedTab='existing';
+    		});
+    	}else if(freq=='once'){
+	    	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity,deliverydate:ok.date};
+    		customerService.buy(order).then(function(){
+    			growl.success('Added to your orders',{ttl:5000})
+    			$scope.selectedTab='existing';
+    		});
+    	}else if(freq=='monthly'){
+	    	order = {item:itemselected._id,frequency:freq,quantity:$scope.quantity,deliveryday:$scope.day};
+    		customerService.buy(order).then(function(){
+    			growl.success('Added to your orders',{ttl:5000})
+    			$scope.selectedTab='existing';
+    		});
+
+    	}
     },function(no){
     console.log(no);	
     });
-    
-
 }
+
+$scope.date='';
+$scope.day='';
 
 }]);
