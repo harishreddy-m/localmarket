@@ -1,6 +1,6 @@
 {
   "App": {
-  	  "title":"Offerings",
+  	  "title":"myOfficeAdmin",
       "dbConfig": {"user":"admin","password":"LEuYIrY6VRwy"},
       "Port":"3000",
          "imageStorage":{ 
