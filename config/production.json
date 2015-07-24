@@ -2,6 +2,11 @@
   "App": {
   	  "title":"Offerings",
       "dbConfig": {"user":"admin","password":"LEuYIrY6VRwy"},
-      "Port":"3000"
+      "Port":"3000",
+         "imageStorage":{ 
+  "cloud_name": "offerings-prod", 
+  "api_key": "873719332996199", 
+  "api_secret": "ELbm4JRUQOELUfqSh2K287Bp-jo" 
+}
   }
 }

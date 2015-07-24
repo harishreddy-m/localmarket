@@ -58,7 +58,6 @@ router.get("/items",function(req,res){
 
 router.get("/orders",function(req,res){
 	Customer.findOne({whois:req.session.user._id}).select("orders").populate("orders").exec(function(error,customer){
-
 		if(error)
 			console.log(error);
 		else{

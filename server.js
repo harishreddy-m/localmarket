@@ -14,7 +14,7 @@
  morgan         = require('morgan'),
  bodyParser     = require('body-parser'),
  multer  = require('multer'),
-
+ cloudinary = require('cloudinary');
  methodOverride = require('method-override'),
  engines = require('consolidate'),
  app = express(),
@@ -55,6 +55,8 @@
     console.error.bind(console, 'Connection error!');
     dbmessage = 'MongoDB error!';
 });
+
+ cloudinary.config(config.get('App.imageStorage'));
 
  app.use(session(
     {secret:"secret key",resave: true,

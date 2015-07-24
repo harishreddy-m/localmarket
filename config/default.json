@@ -2,6 +2,11 @@
   "App": {
   	"title":"Offerings",
     "dbConfig":{"url":"mongodb://harish:qwerty123@ds047800.mongolab.com:47800/offerings"},
-    "Port":"3000"
+    "Port":"3000",
+    "imageStorage":{ 
+  "cloud_name": "offerings", 
+  "api_key": "179578151312343", 
+  "api_secret": "FlJgf5x7n5FqSFllYINVpSeUik0" 
+}
   }
 }

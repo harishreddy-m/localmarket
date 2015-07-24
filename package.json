@@ -16,6 +16,7 @@
     "jade": ">= 0.0.1",
     "connect-mongo": "0.8.1",
     "config": "*",
+    "cloudinary":"*",
     "connect-multiparty":"*"
   },
   "devDependencies": {

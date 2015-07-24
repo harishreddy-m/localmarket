@@ -7,6 +7,7 @@ var _ = require('underscore');
 var Category = require('../models/category');
 multiparty = require('connect-multiparty'),
 multipartyMiddleware = multiparty(),
+cloudinary = require('cloudinary');
 
 
 
@@ -35,16 +36,30 @@ router.get("/items/:catname",function(req,res){
 
 router.post('/new',multipartyMiddleware,function(req,res){
 	var item = new Item(req.body);
-	item.image = req.files.file.path.replace('public',"").replace('\\','/');
-	
-	item.save(function(err){
-		if(!err){
-			Category.findOneAndUpdate({name:req.body.category}, {$push:{"items":item._id}}, {safe: true, upsert: true, new : true}, function(err, doc){
-				if (err) return res.send(500, { error: err });
-				return res.send("succesfully saved");
+	cloudinary.uploader.upload(
+		req.files.file.path,
+		function(result) { 
+			item.image = result.url;
+
+			item.save(function(err){
+				if(!err){
+					Category.findOneAndUpdate({name:req.body.category}, {$push:{"items":item._id}}, {safe: true, upsert: true, new : true}, function(err, doc){
+						if (err) return res.send(500, { error: err });
+						return res.send("succesfully saved");
+					});
+				}
 			});
-		}
-	});
+		},
+		{
+			public_id: req.files.file.name.split('.')[0] , 
+			width: 2000,
+			height: 2000,
+			eager: [
+			{ width: 200, height: 200, crop: 'thumb'}
+			],                                     
+			tags: ['item',req.body.category]
+		}      
+		);
 });
 
 
