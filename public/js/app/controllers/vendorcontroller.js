@@ -1,4 +1,4 @@
-angular.module('offeringsApp').controller('VendorController', ['$scope','vendorService','FileUploader','growl','$timeout', function($scope,vendorService,FileUploader,growl,$timeout) {
+angular.module('offeringsApp').controller('VendorController', ['$scope','vendorService','FileUploader','growl','Upload', function($scope,vendorService,FileUploader,growl,Upload) {
   $scope.pincode = '201014';
   $scope.vendors=[];
   $scope.selections=[]
@@ -50,6 +50,41 @@ remove vendor
         console.log(msg);
       });
     };
+
+ /*Import vendors
+ */
+ $scope.isUploading = false;
+ $scope.csv=[];
+
+$scope.addBulk = function(){
+  $scope.isUploading = true;
+ if ($scope.csv && $scope.csv.length) {
+            for (var i = 0; i < $scope.csv.length; i++) {
+                var file = $scope.csv[i];
+                Upload.upload({
+                    url: '/vendor/bulk',
+                    file: file
+                }).progress(function (evt) {
+                    var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                    console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+                }).success(function (data, status, headers, config) {
+                    console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
+                    $scope.isUploading=false;
+                    $scope.csv=[];
+                }).error(function (data, status, headers, config) {
+                    console.log('error status: ' + status);
+                    $scope.isUploading=false;
+                    $scope.csv=[];
+                });
+            }
+        }
+}
+
+$scope.upload = function(files){
+$scope.csv=files;
+}
+
+
 
   /*
   Add vendor

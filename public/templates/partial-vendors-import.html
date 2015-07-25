@@ -1,0 +1,13 @@
+<h2>Select a csv file which has data in this format</h2>
+<hr/>
+vendorName | email | phone | street 1,area,city | category1,category2,category3,category4 | pincode1,pincode2,pincode3
+<hr/>
+
+<form ng-controller="VendorController" ng-submit="addBulk()" name="importForm">
+				<div class="form-group">
+					<label for="csv">CSV File</label>
+					<input type="file" id="csv" ngf-select ngf-change="upload($files)" accept=".csv">
+				</div>
+			
+  <button type="submit" class="btn btn-default" ng-disabled="isUploading">Save</button>
+</form>

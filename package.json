@@ -17,7 +17,8 @@
     "connect-mongo": "0.8.1",
     "config": "*",
     "cloudinary":"*",
-    "connect-multiparty":"*"
+    "connect-multiparty":"*",
+    "csv-parse":"*"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

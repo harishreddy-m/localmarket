@@ -31,6 +31,10 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider
           url: '/new',
           templateUrl: '/templates/partial-vendors-add.html'
         })
+        .state('home.admin.bulkvendors', {
+          url: '/bulk',
+          templateUrl: '/templates/partial-vendors-import.html'
+        })
         .state('home.admin.items', {
           url: '/items',
           templateUrl: '/templates/partial-items.html',

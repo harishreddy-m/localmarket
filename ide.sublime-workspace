@@ -212,42 +212,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/routes/items.js",
-			"settings":
-			{
-				"buffer_size": 1644,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server.js",
-			"settings":
-			{
-				"buffer_size": 3833,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config/default.json",
-			"settings":
-			{
-				"buffer_size": 286,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "config/production.json",
 			"settings":
 			{
-				"buffer_size": 271,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/hobbyWorkspace/facebook/login.php",
-			"settings":
-			{
-				"buffer_size": 1410,
+				"buffer_size": 275,
 				"line_ending": "Windows"
 			}
 		}
@@ -315,10 +283,15 @@
 	],
 	"file_history":
 	[
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ms/WEB-INF/ms-data.xml",
+		"/E/secrets/instances for bigdata.txt",
+		"/D/hobbyWorkspace/localmarket/src/routes/items.js",
+		"/D/hobbyWorkspace/localmarket/server.js",
+		"/D/hobbyWorkspace/localmarket/config/default.json",
+		"/D/hobbyWorkspace/facebook/login.php",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-list.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/displayController.js",
 		"/D/hobbyWorkspace/localmarket/package.json",
-		"/D/hobbyWorkspace/localmarket/server.js",
 		"/D/hobbyWorkspace/localmarket/src/views/user/home.html",
 		"/D/hobbyWorkspace/localmarket/bower.json",
 		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
@@ -336,8 +309,6 @@
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-items.html",
 		"/D/hobbyWorkspace/localmarket/src/views/index.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/itemcontroller.js",
-		"/D/hobbyWorkspace/localmarket/config/default.json",
-		"/D/hobbyWorkspace/localmarket/src/routes/items.js",
 		"/D/hobbyWorkspace/localmarket/src/models/category.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/shopservice.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/vendors.js",
@@ -431,7 +402,6 @@
 		"/C/Users/3clogic/Desktop/assignConfig.xml",
 		"/C/ProgramData/3CLogic/Users/NODENEW/Configuration/2_localhost;8080;cs;ws;config;ccid=33.xml",
 		"/C/Program Files (x86)/3CLogic/Common/3CLogicNodeAdmin.exe.config",
-		"/E/secrets/instances for bigdata.txt",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/index.html",
 		"/C/Users/3clogic/workspace/ls_trunk/src/test/resources/obelyx-deployment.properties",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/callChatLocal.html",
@@ -440,9 +410,7 @@
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/partials/dialPlan.html",
 		"/D/patches/5.5/automate",
 		"/D/workspace/ms_5.3.1.66794/src/main/resources/ms-lead.xml",
-		"/D/workspace/ms_5.3.1.66794/src/main/resources/liquibase/liquibase.xml",
-		"/D/workspace/ms_5.3.1.66794/pom.xml",
-		"/C/Program Files (x86)/EasyPHP-DevServer-14.1VC11/data/localweb/ccam/include/conf.inc.php"
+		"/D/workspace/ms_5.3.1.66794/src/main/resources/liquibase/liquibase.xml"
 	],
 	"find":
 	{
@@ -567,83 +535,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/routes/items.js",
+					"file": "config/production.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1644,
+						"buffer_size": 275,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1410,
-								1410
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 476.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3833,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1679,
-								1679
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 556.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/default.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								286,
-								286
+								40,
+								40
 							]
 						],
 						"settings":
@@ -655,64 +564,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "config/production.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 271,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								261,
-								261
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/hobbyWorkspace/facebook/login.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1410,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5,
-								5
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
