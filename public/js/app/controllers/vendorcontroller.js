@@ -8,13 +8,15 @@ angular.module('offeringsApp').controller('VendorController', ['$scope','vendorS
         enableGridMenu:true,
         columnDefs: [
           { name:'Name', field: 'name' },
-          { name:'email', field: 'email' },
-          { name:'phone', field: 'phone' },
-          { name:'address', field: 'address' ,enableSorting:false},
-          { name:'Services', field: 'categories.join(",")',enableSorting:false},
-          { name:'Areas', field: 'pincodes.join(",")',enableSorting:false}
+          { name:'email', field: 'email' ,enableCellEdit: true},
+          { name:'phone', field: 'phone' ,enableCellEdit: true},
+          { name:'address', field: 'address' ,enableSorting:false,enableCellEdit: true},
+          { name:'Services', field: 'categories',enableSorting:false,enableCellEdit: true},
+          { name:'Areas', field: 'pincodes',enableSorting:false,enableCellEdit: true}
         ]
       };
+
+  
   
   $scope.search = function() {
     if ($scope.pincode) {
@@ -49,6 +51,13 @@ remove vendor
         var msg = 'rows changed ' + rows.length;
         console.log(msg);
       });
+
+      gridApi.edit.on.afterCellEdit($scope,function(rowEntity, colDef, newValue, oldValue){
+            console.log( 'edited row id:' + rowEntity._id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue );
+            vendorService.update(rowEntity,colDef.field);
+            $scope.$apply();
+
+          });
     };
 
  /*Import vendors
@@ -104,4 +113,12 @@ $scope.csv=files;
   $scope.uploader.onErrorItem = function(fileItem, response, status, headers) {
     growl.error("Failed",{ttl:5000});
       };
-}]);
+}]).filter('mapString', function() {
+  return function(input) {
+    if (!input){
+      return '';
+    } else {
+      return input.join(",");
+    }
+  };
+});

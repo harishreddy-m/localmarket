@@ -16,6 +16,8 @@
     "ng-file-upload":"latest",
     "ng-file-upload-shim":"latest",
     "ngDialog":"*",
+    "pdfmake":"*",
+    "angular-loading-bar":"*",
     "angularjs-datepicker":"*"
   },
   "resolutions": {

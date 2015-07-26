@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose     = require('mongoose');
+var _ = require('underscore');
 
 var fs = require('fs');
 var parse = require('csv-parse');
@@ -9,7 +10,7 @@ var Vendor = require('../models/vendor');
 
 // define the home page route
 router.get('/pincode/:pin', function(req, res) {
-	Vendor.find({ pincodes: req.params.pin}, function(error,vendors){
+	Vendor.find({ pincodes: req.params.pin}).select(' -__v -logo').exec(function(error,vendors){
 		res.send(vendors);
 	});
 
@@ -17,6 +18,23 @@ router.get('/pincode/:pin', function(req, res) {
 // define the about route
 router.get('/detail/:id', function(req, res) {
 	res.send('About ');
+});
+
+router.post('/update',function(req,res){
+	var upvendor = req.body.toupdate;
+	var field = req.body.field;
+	Vendor.findById(upvendor._id, function (err, vendor) {
+  if (err) return handleError(err);
+  if(field=='categories' || field=='pincodes')
+  vendor[field] = upvendor[field].split(",");
+  else
+  vendor[field] = upvendor[field];
+  vendor.save(function (err) {
+    if (err) return handleError(err);
+    res.send(200);
+  });
+}); 
+
 });
 
 router.post('/new',function(req,res){
