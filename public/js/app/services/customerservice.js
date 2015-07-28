@@ -17,8 +17,8 @@ angular.module('offeringsApp').service('customerService', function($http){
 		return promise
 	}
 
-	this.getExistingOrders = function(order){
-		var promise = $http.get('/customer/orders',order).then(function (response) {
+	this.getExistingOrders = function(){
+		var promise = $http.get('/customer/orders').then(function (response) {
         return response.data;
       });
 		return promise

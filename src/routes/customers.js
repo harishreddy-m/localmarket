@@ -17,6 +17,18 @@ router.post("/profile",function(req,res){
 	});
 });
 
+router.get("/orders",function(req,res){
+	Customer.findOne({whois:req.session.user._id}).select("orders").populate("orders").exec(function(error,customer){
+		if(error)
+			console.log(error);
+		else{
+			Item.populate(customer, { path: 'orders.item' },function(){
+				res.send(customer.orders);
+			});
+		}
+	});
+});
+
 router.post("/buy",function(req,res){
 	var order = new Order(req.body);
 	order.save(function(err){
@@ -56,17 +68,7 @@ router.get("/items",function(req,res){
 	});
 });
 
-router.get("/orders",function(req,res){
-	Customer.findOne({whois:req.session.user._id}).select("orders").populate("orders").exec(function(error,customer){
-		if(error)
-			console.log(error);
-		else{
-			Item.populate(customer, { path: 'orders.item' },function(){
-				res.send(customer.orders);
-			});
-		}
-	});
-});
+
 
 router.post("/delete",function(req,res){
 	Customer.findOne({whois:req.session.user._id}).select("orders").exec(function(error,customer){
