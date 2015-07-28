@@ -13,7 +13,6 @@
  session = require('express-session'),
  morgan         = require('morgan'),
  bodyParser     = require('body-parser'),
- multer  = require('multer'),
  cloudinary = require('cloudinary');
  methodOverride = require('method-override'),
  engines = require('consolidate'),
@@ -29,8 +28,6 @@
     dbConfig = config.get('App.dbConfig.url');
     app.set('PORT',config.get("App.Port"));
     app.set('IP',"127.0.0.1");
-
-
 }else{
     dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbConfig.password')+"@"+process.env.OPENSHIFT_MONGODB_DB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT+"/localmarket";
     app.set('PORT',process.env.OPENSHIFT_NODEJS_PORT);
@@ -60,14 +57,15 @@
 
  app.use(session(
     {secret:"secret key",resave: true,
+    cookie: { maxAge: 24 * 60 * 60 * 1000 },
     saveUninitialized: true,
-    store:new MongoStore({mongooseConnection: db})}));
+    store:new MongoStore({mongooseConnection: db,clear_interval: 3600})}));
  app.use(express.static(__dirname + '/public'));
     app.use(morgan('dev'));                     // log every request to the console
     app.use(bodyParser.urlencoded({ extended: false }))    // parse application/x-www-form-urlencoded
     app.use(bodyParser.json())    // parse application/json
     app.use(methodOverride());
-   /* app.use(multer({ dest: './public/data/'}));*/
+
     var multipart = require('connect-multiparty');
 
     app.use(multipart({
@@ -90,46 +88,11 @@ app.use('/vendor', require('./src/routes/vendors'));
 app.use('/user', require('./src/routes/users'));
 app.use('/customer', require('./src/routes/customers'));
 app.use('/shop', require('./src/routes/items'));
+app.use('/', require('./src/routes/root'));
 
 
 
 
-
-app.get("/", function (req, res) {
-    if (req.session.loggedIn) {
-        res.redirect('/home')
-    }else{
-        res.render('index', {
-            title:config.get('App.title'),
-            message:'Welcome!!'
-        });
-    }
-});
-
-app.get("/home", function (req, res) {
-    if (req.session.loggedIn) {
-        res.render('user/home', {
-            user:req.session.user,
-            title: config.get('App.title')
-        });
-    } else {
-        res.render('index', {
-            title:config.get('App.title'),
-            message:'Welcome!!'
-        });
-    }
-})
-
-
-
-// LOGOUT
-app.get('/logout', function (req, res) {
-    // clear user session
-    req.session.loggedIn = false;
-    res.render('index',{
-        title:config.get('App.title'),
-        message:'Byee!!'});
-});
 
 
 app.listen(app.get('PORT'),app.get('IP'),function(){
@@ -142,3 +105,16 @@ app.listen(app.get('PORT'),app.get('IP'),function(){
 
 
 });
+
+
+var Agenda = require('agenda')
+var agenda = new Agenda({db: { address: dbConfig,collection:'agendajobs'}});
+
+agenda.define('generate bills for orders', function(job, done) {
+console.log('Generating bill for ' + new Date());
+done();
+});
+
+agenda.every('24 hours', 'generate bills for orders');
+
+agenda.start();

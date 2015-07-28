@@ -4,16 +4,48 @@
 		"selected_items":
 		[
 			[
+				"fi",
+				"field"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"ve",
+				"vendor"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"s",
+				"split"
+			],
+			[
+				"pin",
+				"pincodes"
+			],
+			[
+				"ro",
+				"rowEntity"
+			],
+			[
+				"ven",
+				"vendorService"
+			],
+			[
+				"gr",
+				"growl"
+			],
+			[
 				"re",
 				"record"
 			],
 			[
 				"par",
 				"parser"
-			],
-			[
-				"ve",
-				"vendors"
 			],
 			[
 				"con",
@@ -30,10 +62,6 @@
 			[
 				"cu",
 				"customer"
-			],
-			[
-				"s",
-				"success"
 			],
 			[
 				"p",
@@ -76,10 +104,6 @@
 				"Category"
 			],
 			[
-				"l",
-				"label"
-			],
-			[
 				"It",
 				"ItemSchema"
 			],
@@ -94,10 +118,6 @@
 			[
 				"add",
 				"addItems"
-			],
-			[
-				"c",
-				"category"
 			],
 			[
 				"get",
@@ -146,14 +166,6 @@
 			[
 				"fin",
 				"findByIdAndRemove"
-			],
-			[
-				"gr",
-				"gridApi"
-			],
-			[
-				"ven",
-				"vendors"
 			],
 			[
 				"gri",
@@ -216,50 +228,10 @@
 	"buffers":
 	[
 		{
-			"file": "public/templates/admin-home.html",
+			"file": "src/scheduled/billOrders.js",
 			"settings":
 			{
-				"buffer_size": 537,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/js/app/app.js",
-			"settings":
-			{
-				"buffer_size": 2744,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/templates/partial-vendors-import.html",
-			"settings":
-			{
-				"buffer_size": 535,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/js/app/controllers/vendorcontroller.js",
-			"settings":
-			{
-				"buffer_size": 3381,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/routes/vendors.js",
-			"settings":
-			{
-				"buffer_size": 2111,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/models/vendor.js",
-			"settings":
-			{
-				"buffer_size": 407,
+				"buffer_size": 336,
 				"line_ending": "Windows"
 			}
 		},
@@ -267,17 +239,32 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 616,
+				"buffer_size": 614,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/3clogic/Desktop/data.csv",
+			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 63,
-				"line_ending": "Windows",
-				"name": "import vendor|asd@gf.gdf|5345345|street,city|cat1,"
+				"buffer_size": 3390,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/routes/root.js",
+			"settings":
+			{
+				"buffer_size": 885,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/routes/items.js",
+			"settings":
+			{
+				"buffer_size": 1644,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -334,31 +321,34 @@
 	},
 	"expanded_folders":
 	[
-		"/D/hobbyWorkspace/localmarket/public",
-		"/D/hobbyWorkspace/localmarket/public/css",
-		"/D/hobbyWorkspace/localmarket/public/js",
-		"/D/hobbyWorkspace/localmarket/public/js/app",
-		"/D/hobbyWorkspace/localmarket/public/js/app/controllers",
-		"/D/hobbyWorkspace/localmarket/public/templates",
+		"/D/hobbyWorkspace/localmarket",
 		"/D/hobbyWorkspace/localmarket/src",
-		"/D/hobbyWorkspace/localmarket/src/models",
 		"/D/hobbyWorkspace/localmarket/src/routes"
 	],
 	"file_history":
 	[
+		"/D/hobbyWorkspace/localmarket/src/models/billedorder.js",
+		"/D/hobbyWorkspace/localmarket/server.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/vendorcontroller.js",
+		"/D/hobbyWorkspace/localmarket/public/js/app/services/vendorservice.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
+		"/D/hobbyWorkspace/localmarket/src/routes/vendors.js",
+		"/D/hobbyWorkspace/localmarket/bower.json",
+		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
+		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
+		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors-import.html",
+		"/D/hobbyWorkspace/localmarket/src/models/vendor.js",
+		"/D/hobbyWorkspace/localmarket/package.json",
+		"/C/Users/3clogic/Desktop/data.csv",
 		"/D/hobbyWorkspace/localmarket/config/production.json",
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ms/WEB-INF/ms-data.xml",
 		"/E/secrets/instances for bigdata.txt",
 		"/D/hobbyWorkspace/localmarket/src/routes/items.js",
-		"/D/hobbyWorkspace/localmarket/server.js",
 		"/D/hobbyWorkspace/localmarket/config/default.json",
 		"/D/hobbyWorkspace/facebook/login.php",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-list.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/displayController.js",
-		"/D/hobbyWorkspace/localmarket/package.json",
 		"/D/hobbyWorkspace/localmarket/src/views/user/home.html",
-		"/D/hobbyWorkspace/localmarket/bower.json",
-		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/popup-daily.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/customerservice.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
@@ -375,9 +365,7 @@
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/itemcontroller.js",
 		"/D/hobbyWorkspace/localmarket/src/models/category.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/shopservice.js",
-		"/D/hobbyWorkspace/localmarket/src/routes/vendors.js",
 		"/C/Users/3clogic/workspace/kclDistributor/docker/kube-config.txt",
-		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
 		"/D/hobbyWorkspace/localmarket/src/routes/users.js",
 		"/C/Users/3clogic/Documents/mongolab.bat",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/authentication.js",
@@ -385,13 +373,9 @@
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/customercontroller.js",
 		"/C/Users/3clogic/Documents/mongolab.txt",
 		"/D/hobbyWorkspace/localmarket/src/models/user.js",
-		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
 		"/D/.gitignore",
-		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/vendorcontroller.js",
 		"/D/hobbyWorkspace/localmarket/src/views/user/registration.html",
 		"/D/hobbyWorkspace/localmarket/src/views/user/customer.html",
-		"/D/hobbyWorkspace/localmarket/src/models/vendor.js",
-		"/D/hobbyWorkspace/localmarket/public/js/app/services/vendorservice.js",
 		"/C/Users/3clogic/.m2/settings.xml",
 		"/D/patches/translate.patch",
 		"/C/Users/3clogic/workspace/crm_trunk/solr_home/solr.xml",
@@ -470,10 +454,7 @@
 		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ROOT/callChatLocal.html",
 		"/C/ProgramData/3CLogic/Users/NODE/Configuration/1_localhost;8080;cs;ws;config;ccid=7.xml",
 		"/C/Users/3clogic/Downloads/1_https;;;svr05-replica.3ccloud.com;cs;ws;config;ccid=1460 (1).xml",
-		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/partials/dialPlan.html",
-		"/D/patches/5.5/automate",
-		"/D/workspace/ms_5.3.1.66794/src/main/resources/ms-lead.xml",
-		"/D/workspace/ms_5.3.1.66794/src/main/resources/liquibase/liquibase.xml"
+		"/C/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/ls/new/partials/dialPlan.html"
 	],
 	"find":
 	{
@@ -492,6 +473,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_.each",
 			"$timeout",
 			"_.each",
 			"			\n",
@@ -600,88 +582,30 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/templates/admin-home.html",
+					"file": "src/scheduled/billOrders.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 537,
+						"buffer_size": 336,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								511,
-								511
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/js/app/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2744,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1195,
-								1195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/templates/partial-vendors-import.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 535,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								370
+								336,
+								336
 							]
 						],
 						"settings":
 						{
 							"open_with_edit": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -691,107 +615,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/js/app/controllers/vendorcontroller.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3381,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1963,
-								1963
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 636.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/routes/vendors.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1693,
-								1693
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 440.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/models/vendor.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 407,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								224,
-								224
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 1,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 616,
+						"buffer_size": 614,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								526,
-								526
+								26,
+								26
 							]
 						],
 						"settings":
@@ -804,36 +641,97 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/C/Users/3clogic/Desktop/data.csv",
+					"buffer": 2,
+					"file": "server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 63,
+						"buffer_size": 3390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								63,
-								63
+								3340,
+								3340
 							]
 						],
 						"settings":
 						{
-							"auto_name": "import vendor|asd@gf.gdf|5345345|street,city|cat1,",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/routes/root.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								663,
+								663
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/routes/items.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1644,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -887,6 +785,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ve",
+				"public\\js\\app\\services\\vendorservice.js"
+			],
+			[
+				"app.js",
+				"public\\js\\app\\app.js"
+			],
 			[
 				"",
 				"package.json"
