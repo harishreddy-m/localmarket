@@ -9,6 +9,9 @@ angular.module('offeringsApp').service('customerService', function($http){
 	this.getItems = function(){
 		return $http.get('/customer/items');
 	}
+	this.getOrders = function(id){
+		return $http.get('/customer/orders',id);
+	}
 
 	this.buy = function(order){
 		var promise = $http.post('/customer/buy',order).then(function (response) {
@@ -29,6 +32,10 @@ angular.module('offeringsApp').service('customerService', function($http){
         return response.data;
       });
 		return promise;
+	}
+	this.getCustomers=function(){
+		return $http.get('/customer/cus');
+
 	}
 	
 });

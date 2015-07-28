@@ -68,6 +68,17 @@ router.get("/orders",function(req,res){
 	});
 });
 
+router.get("/cus",function(req,res){
+	Customer.find({}).populate("whois").exec(function(error,customer){
+		if(error)
+			console.log(error);
+		else{
+			res.send(customer);
+		}
+	})
+
+})
+
 router.post("/delete",function(req,res){
 	Customer.findOne({whois:req.session.user._id}).select("orders").exec(function(error,customer){
 
