@@ -4,11 +4,27 @@
 		"selected_items":
 		[
 			[
-				"customer",
-				"customerId"
+				"bi",
+				"billamount"
+			],
+			[
+				"bill",
+				"billamount"
+			],
+			[
+				"c",
+				"customers"
 			],
 			[
 				"cu",
+				"customers"
+			],
+			[
+				"cus",
+				"customers"
+			],
+			[
+				"customer",
 				"customerId"
 			],
 			[
@@ -18,10 +34,6 @@
 			[
 				"fi",
 				"field"
-			],
-			[
-				"c",
-				"console"
 			],
 			[
 				"ve",
@@ -144,10 +156,6 @@
 				"display"
 			],
 			[
-				"cus",
-				"customerService"
-			],
-			[
 				"fo",
 				"form	Tag"
 			],
@@ -232,18 +240,34 @@
 	"buffers":
 	[
 		{
-			"file": "src/routes/admin.js",
+			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 765,
+				"buffer_size": 4659,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server.js",
+			"file": "src/models/item.js",
 			"settings":
 			{
-				"buffer_size": 3439,
+				"buffer_size": 292,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/models/order.js",
+			"settings":
+			{
+				"buffer_size": 369,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/models/billedorder.js",
+			"settings":
+			{
+				"buffer_size": 374,
 				"line_ending": "Windows"
 			}
 		}
@@ -302,14 +326,14 @@
 	"expanded_folders":
 	[
 		"/D/hobbyWorkspace/localmarket",
-		"/D/hobbyWorkspace/localmarket/public/js/app",
-		"/D/hobbyWorkspace/localmarket/public/js/app/controllers",
-		"/D/hobbyWorkspace/localmarket/public/js/app/services",
 		"/D/hobbyWorkspace/localmarket/src",
+		"/D/hobbyWorkspace/localmarket/src/models",
 		"/D/hobbyWorkspace/localmarket/src/routes"
 	],
 	"file_history":
 	[
+		"/C/Users/3clogic/workspace/microservice-utils/pom.xml",
+		"/D/hobbyWorkspace/localmarket/src/routes/admin.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-orders.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/ordersCtrl.js",
 		"/D/hobbyWorkspace/localmarket/server.js",
@@ -317,7 +341,6 @@
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/adminservice.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/users.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/customers.js",
-		"/D/hobbyWorkspace/localmarket/src/routes/admin.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/root.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/admin-home.html",
 		"/D/hobbyWorkspace/localmarket/package.json",
@@ -436,8 +459,7 @@
 		"/C/ProgramData/3CLogic/Users/NODENEW/Configuration/1_localhost;8080;cs;ws;config;ccid=33.xml",
 		"/C/Users/3clogic/Downloads/1_https;;;svr05-replica.3ccloud.com;cs;ws;config;ccid=1460.xml",
 		"/C/Users/3clogic/Desktop/assignConfig.xml",
-		"/C/ProgramData/3CLogic/Users/NODENEW/Configuration/2_localhost;8080;cs;ws;config;ccid=33.xml",
-		"/C/Program Files (x86)/3CLogic/Common/3CLogicNodeAdmin.exe.config"
+		"/C/ProgramData/3CLogic/Users/NODENEW/Configuration/2_localhost;8080;cs;ws;config;ccid=33.xml"
 	],
 	"find":
 	{
@@ -456,6 +478,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"                    \n",
 			"getCustomers",
 			"getOrders",
 			"getExistingOrders",
@@ -568,53 +591,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/routes/admin.js",
+					"file": "server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 765,
+						"buffer_size": 4659,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "server.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3439,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								4525,
+								4525
 							]
 						],
 						"settings":
@@ -624,10 +618,94 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1200.0,
+						"translation.y": 2040.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/models/item.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/models/order.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								240,
+								240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/models/billedorder.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								129,
+								129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

@@ -106,15 +106,6 @@ app.listen(app.get('PORT'),app.get('IP'),function(){
 
 });
 
+var agenda = require('./src/jobs/billing.js')
 
-var Agenda = require('agenda')
-var agenda = new Agenda({db: { address: dbConfig,collection:'agendajobs'}});
-
-agenda.define('generate bills for orders', function(job, done) {
-console.log('Generating bill for ' + new Date());
-done();
-});
-
-agenda.every('24 hours', 'generate bills for orders');
-
-agenda.start();
+agenda.agenda.start();
