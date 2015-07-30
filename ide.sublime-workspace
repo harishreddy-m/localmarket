@@ -4,16 +4,36 @@
 		"selected_items":
 		[
 			[
+				"p",
+				"populate"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"e",
+				"error"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"b",
+				"billorder"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
 				"bi",
 				"billamount"
 			],
 			[
 				"bill",
 				"billamount"
-			],
-			[
-				"c",
-				"customers"
 			],
 			[
 				"cu",
@@ -40,10 +60,6 @@
 				"vendor"
 			],
 			[
-				"l",
-				"length"
-			],
-			[
 				"s",
 				"split"
 			],
@@ -68,20 +84,12 @@
 				"parser"
 			],
 			[
-				"con",
-				"config"
-			],
-			[
 				"res",
 				"result"
 			],
 			[
 				"or",
 				"order"
-			],
-			[
-				"p",
-				"populate"
 			],
 			[
 				"se",
@@ -146,10 +154,6 @@
 			[
 				"Ca",
 				"CategorySchema"
-			],
-			[
-				"e",
-				"else"
 			],
 			[
 				"d",
@@ -240,34 +244,10 @@
 	"buffers":
 	[
 		{
-			"file": "server.js",
+			"file": "src/jobs/billing.js",
 			"settings":
 			{
-				"buffer_size": 4659,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/models/item.js",
-			"settings":
-			{
-				"buffer_size": 292,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/models/order.js",
-			"settings":
-			{
-				"buffer_size": 369,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/models/billedorder.js",
-			"settings":
-			{
-				"buffer_size": 374,
+				"buffer_size": 2035,
 				"line_ending": "Windows"
 			}
 		}
@@ -325,18 +305,20 @@
 	},
 	"expanded_folders":
 	[
-		"/D/hobbyWorkspace/localmarket",
 		"/D/hobbyWorkspace/localmarket/src",
 		"/D/hobbyWorkspace/localmarket/src/models",
 		"/D/hobbyWorkspace/localmarket/src/routes"
 	],
 	"file_history":
 	[
+		"/D/hobbyWorkspace/localmarket/src/models/billedorder.js",
+		"/D/hobbyWorkspace/localmarket/server.js",
+		"/D/hobbyWorkspace/localmarket/src/models/order.js",
+		"/D/hobbyWorkspace/localmarket/src/models/item.js",
 		"/C/Users/3clogic/workspace/microservice-utils/pom.xml",
 		"/D/hobbyWorkspace/localmarket/src/routes/admin.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-orders.html",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/ordersCtrl.js",
-		"/D/hobbyWorkspace/localmarket/server.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/customerservice.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/adminservice.js",
 		"/D/hobbyWorkspace/localmarket/src/routes/users.js",
@@ -346,7 +328,6 @@
 		"/D/hobbyWorkspace/localmarket/package.json",
 		"/D/hobbyWorkspace/localmarket/public/js/app/app.js",
 		"/D/hobbyWorkspace/localmarket/src/scheduled/billOrders.js",
-		"/D/hobbyWorkspace/localmarket/src/models/billedorder.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/controllers/vendorcontroller.js",
 		"/D/hobbyWorkspace/localmarket/public/js/app/services/vendorservice.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-vendors.html",
@@ -367,11 +348,9 @@
 		"/D/hobbyWorkspace/localmarket/public/templates/popup-daily.html",
 		"/D/hobbyWorkspace/localmarket/public/templates/popup-monthly.html",
 		"/D/hobbyWorkspace/localmarket/public/templates/popup-once.html",
-		"/D/hobbyWorkspace/localmarket/src/models/order.js",
 		"/D/hobbyWorkspace/localmarket/public/css/site.css",
 		"/D/hobbyWorkspace/localmarket/src/models/customer.js",
 		"/D/hobbyWorkspace/localmarket/public/templates/customers-home.html",
-		"/D/hobbyWorkspace/localmarket/src/models/item.js",
 		"/D/hobbyWorkspace/localmarket/.gitignore",
 		"/D/hobbyWorkspace/localmarket/public/templates/partial-items.html",
 		"/D/hobbyWorkspace/localmarket/src/views/index.html",
@@ -596,116 +575,33 @@
 			[
 				{
 					"buffer": 0,
-					"file": "server.js",
+					"file": "src/jobs/billing.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4659,
+						"buffer_size": 2035,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4525,
-								4525
+								1977,
+								1977
 							]
 						],
 						"settings":
 						{
+							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2040.0,
+						"translation.y": 116.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/models/item.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 292,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/models/order.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 369,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								240,
-								240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/models/billedorder.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								129,
-								129
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
