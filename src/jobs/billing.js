@@ -22,23 +22,31 @@ agenda.define('generate bills for orders', function(job, done) {
         else{
             Item.populate(customers,{path: 'orders.item' },function(){
                 for(var i=0;i<customers.length;i++){
-                    var dailyorder = new BilledOrder({billingdate : new Date(),customer:customers[i]._id,billamount:0})
+                    var today = new Date();
+                    var dailyorders = new BilledOrder({billingdate : today,customer:customers[i]._id,billamount:0});
+                    var onceorders = new BilledOrder({billingdate : today,customer:customers[i]._id,billamount:0});
+                    var monthlyorders = new BilledOrder({billingdate : today,customer:customers[i]._id,billamount:0});
+                    var dailyamount=0,onceamount=0,monthlyamount=0;
                    for(var j=0;j<customers[i].orders.length;j++){                    
                     if(customers[i].orders[j].frequency=='daily'){
-                        dailyorder.orders.push(customers[i].orders[j]._id);
+                        dailyorders.orders.push(customers[i].orders[j]._id);
                         dailyamount=dailyamount+(customers[i].orders[j].quantity*customers[i].orders[j].item.price);
-                    }else if(customers[i].orders[j].frequency=='once'){
-                        var billorder = new BilledOrder({billingdate : new Date(),customer:customers[i]._id,billamount:(customers[i].orders[j].quantity*customers[i].orders[j].item.price)});
-                        billorder.orders.push(customers[i].orders[j]._id);
-                        billorder.save(function(error){
-                            if(error)
-                                console.log(error);
-                        });
-                    }else if(customers[i].orders[j].frequency=='monthly'){
-
+                    }else if(customers[i].orders[j].frequency=='once' && customers[i].orders[j].deliverydate==today.getTime()){
+                        onceamount  =onceamount+ customers[i].orders[j].quantity*customers[i].orders[j].item.price;
+                        onceorders.orders.push(customers[i].orders[j]._id);
+                    }else if(customers[i].orders[j].frequency=='monthly' && customers[i].orders[j].deliveryday==today.getDate()){
+                         monthlyamount  =monthlyamount+ customers[i].orders[j].quantity*customers[i].orders[j].item.price;
+                        monthlyorders.orders.push(customers[i].orders[j]._id);
                     }
-                    dailyorder.billamount=dailyamount;
                 }
+                 dailyorders.billamount=dailyamount;
+                 onceorders.billamount=onceamount;
+                 monthlyorders.billamount=monthlyamount;
+                dailyorders.save(function(error){if(error)console.log(error);});
+                
+                onceorders.save(function(error){if(error)console.log(error);});
+                
+                monthlyorders.save(function(error){if(error)console.log(error);});
             }
         })
 }
