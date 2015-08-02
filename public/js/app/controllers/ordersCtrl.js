@@ -12,16 +12,22 @@ angular.module('offeringsApp').controller('ordersController',['$scope','growl','
                     row.entity.subGridOptions = {
                     columnDefs: [
                                { name:'Product Name', field: 'item' },
-                               { name:'Quantity', field: 'quantity'}
+                               { name:'Quantity', field: 'quantity',enableCellEdit: true}
                     ]};
                     adminService.getCustomerOrdersForToday(row.entity._id).then(function(res){
-                    //check if the order is to be delivered today based on frequency logic
                     row.entity.subGridOptions.data = res['data'];
                   });
                   
                   
                 }
             });
+             gridApi.edit.on.afterCellEdit($scope,function(rowEntity, colDef, newValue, oldValue){
+            console.log( 'edited row id:' + rowEntity._id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue );
+            if(!isNaN(newValue) )
+            adminService.updateBilledOrder(rowEntity,newValue);
+            $scope.$apply();
+
+          });
         }
       }
  
