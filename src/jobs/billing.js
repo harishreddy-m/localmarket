@@ -31,7 +31,7 @@ agenda.define('generate bills for orders', function(job, done) {
                     if(customers[i].orders[j].frequency=='daily'){
                         dailyorders.orders.push(customers[i].orders[j]._id);
                         dailyamount=dailyamount+(customers[i].orders[j].quantity*customers[i].orders[j].item.price);
-                    }else if(customers[i].orders[j].frequency=='once' && customers[i].orders[j].deliverydate==today.getTime()){
+                    }else if(customers[i].orders[j].frequency=='once' && getSimpleDate(customers[i].orders[j].deliverydate)==getSimpleDate(today)){
                         onceamount  =onceamount+ customers[i].orders[j].quantity*customers[i].orders[j].item.price;
                         onceorders.orders.push(customers[i].orders[j]._id);
                     }else if(customers[i].orders[j].frequency=='monthly' && customers[i].orders[j].deliveryday==today.getDate()){
@@ -42,18 +42,26 @@ agenda.define('generate bills for orders', function(job, done) {
                  dailyorders.billamount=dailyamount;
                  onceorders.billamount=onceamount;
                  monthlyorders.billamount=monthlyamount;
+                if(dailyamount>0)
                 dailyorders.save(function(error){if(error)console.log(error);});
-                
+                if(onceamount>0)
                 onceorders.save(function(error){if(error)console.log(error);});
-                
+                if(monthlyamount>0)
                 monthlyorders.save(function(error){if(error)console.log(error);});
+                 console.log('Generating bill completed at ' + new Date()+"\n-------------------------------\n");
             }
         })
 }
 });
+   
+
 done();
 });
 
-agenda.every('24 hours', 'generate bills for orders');
+function getSimpleDate(dt){
+    return dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
+}
+
+agenda.every('2 minutes', 'generate bills for orders');
 
 exports.agenda = agenda;

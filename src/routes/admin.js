@@ -4,7 +4,6 @@ var router = express.Router();
 var _ = require('underscore');
 var Customer = require('../models/customer');
 var Item = require('../models/item');
-var Order = require('../models/order');
 
 
 router.get("/customer/:customerId/orders",function(req,res){

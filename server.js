@@ -26,8 +26,8 @@
  var env = process.env.NODE_ENV || 'development';
  if ('development' == env) {
     dbConfig = config.get('App.dbConfig.url');
-    app.set('PORT',config.get("App.Port"));
-    app.set('IP',"127.0.0.1");
+    app.set('PORT',process.env.PORT);
+    app.set('IP',process.env.IP);
 }else{
     dbConfig = "mongodb://"+config.get('App.dbConfig.user')+":"+config.get('App.dbConfig.password')+"@"+process.env.OPENSHIFT_MONGODB_DB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT+"/localmarket";
     app.set('PORT',process.env.OPENSHIFT_NODEJS_PORT);
