@@ -11,7 +11,7 @@ angular.module('offeringsApp').controller('ordersController',['$scope','growl','
                 if (row.isExpanded) {
                     row.entity.subGridOptions = {
                     columnDefs: [
-                               { name:'Product Name', field: 'item.name' },
+                               { name:'Product Name', field: 'item' },
                                { name:'Quantity', field: 'quantity'}
                     ]};
                     adminService.getCustomerOrdersForToday(row.entity._id).then(function(res){
@@ -27,7 +27,7 @@ angular.module('offeringsApp').controller('ordersController',['$scope','growl','
  
       $scope.gridOptions.columnDefs = [
               {name:'Customer Name',field:'whois.username'},
-              {name:'Total Order',field:'orders.length'},
+              {name:'Pincode',field:'pincode'},
               {name:'Email',field:'whois.email'}
         ];
  

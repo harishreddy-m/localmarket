@@ -23,20 +23,20 @@ agenda.define('generate bills for orders', function(job, done) {
             Item.populate(customers,{path: 'orders.item' },function(){
                 for(var i=0;i<customers.length;i++){
                     var today = new Date();
-                    var dailyorders = new BilledOrder({billingdate : today,customer:customers[i]._id,billamount:0});
-                    var onceorders = new BilledOrder({billingdate : today,customer:customers[i]._id,billamount:0});
-                    var monthlyorders = new BilledOrder({billingdate : today,customer:customers[i]._id,billamount:0});
+                    var dailyorders = new BilledOrder({billingdate : getSimpleDate(today),customer:customers[i]._id,billamount:0});
+                    var onceorders = new BilledOrder({billingdate : getSimpleDate(today),customer:customers[i]._id,billamount:0});
+                    var monthlyorders = new BilledOrder({billingdate : getSimpleDate(today),customer:customers[i]._id,billamount:0});
                     var dailyamount=0,onceamount=0,monthlyamount=0;
                    for(var j=0;j<customers[i].orders.length;j++){                    
                     if(customers[i].orders[j].frequency=='daily'){
-                        dailyorders.orders.push(customers[i].orders[j]._id);
+                        dailyorders.orders.push({item:customers[i].orders[j].item.name,quantity:customers[i].orders[j].quantity,price:customers[i].orders[j].item.price});
                         dailyamount=dailyamount+(customers[i].orders[j].quantity*customers[i].orders[j].item.price);
                     }else if(customers[i].orders[j].frequency=='once' && getSimpleDate(customers[i].orders[j].deliverydate)==getSimpleDate(today)){
                         onceamount  =onceamount+ customers[i].orders[j].quantity*customers[i].orders[j].item.price;
-                        onceorders.orders.push(customers[i].orders[j]._id);
+                        onceorders.orders.push({item:customers[i].orders[j].item.name,quantity:customers[i].orders[j].quantity,price:customers[i].orders[j].item.price});
                     }else if(customers[i].orders[j].frequency=='monthly' && customers[i].orders[j].deliveryday==today.getDate()){
                          monthlyamount  =monthlyamount+ customers[i].orders[j].quantity*customers[i].orders[j].item.price;
-                        monthlyorders.orders.push(customers[i].orders[j]._id);
+                        monthlyorders.orders.push({item:customers[i].orders[j].item.name,quantity:customers[i].orders[j].quantity,price:customers[i].orders[j].item.price});
                     }
                 }
                  dailyorders.billamount=dailyamount;
@@ -62,6 +62,11 @@ function getSimpleDate(dt){
     return dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
 }
 
-agenda.every('2 minutes', 'generate bills for orders');
+/*Commented for developement purpose
+*/
+//agenda.every('24 hours', 'generate bills for orders');
+
+agenda.now( 'generate bills for orders');
+
 
 exports.agenda = agenda;
