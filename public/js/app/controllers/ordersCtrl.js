@@ -11,9 +11,18 @@ angular.module('offeringsApp').controller('ordersController',['$scope','growl','
                 if (row.isExpanded) {
                     row.entity.subGridOptions = {
                     columnDefs: [
-                               { name:'Product Name', field: 'item' },
-                               { name:'Quantity', field: 'quantity',enableCellEdit: true}
-                    ]};
+                               { name:'Product Name', field: 'item' ,enableCellEdit: false},
+                               { name:'Quantity', field: 'quantity'}
+                    ],
+                    onRegisterApi: function (gridApi) {
+                        gridApi.edit.on.afterCellEdit($scope,function(rowEntity, colDef, newValue, oldValue){
+            if(!isNaN(newValue) )
+            adminService.updateBilledOrder(row.entity._id,rowEntity.item,newValue);
+            $scope.$apply();
+
+          });
+                    }
+                    };
                     adminService.getCustomerOrdersForToday(row.entity._id).then(function(res){
                     row.entity.subGridOptions.data = res['data'];
                   });
@@ -21,13 +30,7 @@ angular.module('offeringsApp').controller('ordersController',['$scope','growl','
                   
                 }
             });
-             gridApi.edit.on.afterCellEdit($scope,function(rowEntity, colDef, newValue, oldValue){
-            console.log( 'edited row id:' + rowEntity._id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue );
-            if(!isNaN(newValue) )
-            adminService.updateBilledOrder(rowEntity,newValue);
-            $scope.$apply();
-
-          });
+             
         }
       }
  

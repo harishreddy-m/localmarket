@@ -20,6 +20,27 @@ router.get("/customer/:customerId/orders",function(req,res){
 	});
 });
 
+router.post("/edit/order",function(req,res){
+	BilledOrder.findOne({customer:req.body.customer,billingdate:getSimpleDate(new Date())}).exec(function(error,bill){
+		if(error)
+			console.log(error);
+		else{
+			for(var i=0;i<bill.orders.length;i++){
+				if(bill.orders[i].item === req.body.name){
+				   bill.billamount = bill.billamount + (req.body.quantity - bill.orders[i].quantity)*bill.orders[i].price;
+				   bill.orders[i].quantity = req.body.quantity;
+				   bill.markModified('orders.'+i+'.quantity');
+				   break;
+				}
+			}	
+			bill.save(function(err){
+				if(err) console.log(err);
+				res.send(200);
+			})
+		}
+	});
+});
+
 router.get("/customers",function(req,res){
 	Customer.find({}).populate("whois").exec(function(error,customer){
 		if(error)
