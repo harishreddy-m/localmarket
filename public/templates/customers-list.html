@@ -8,9 +8,6 @@
 		<li clas="tab" ng-class="{tabactive:selectedTab==='existing'}"> 
 			<a href class="tab" ng-click="selectedTab = 'existing';fetchOrders();">My orders</a> 
 		</li>
-		<li clas="tab" ng-class="{tabactive:selectedTab==='bill'}"> 
-			<a href class="tab" ng-click="selectedTab = 'bill';fetchBills();">My Bills</a> 
-		</li>
 	</ul>	
 </div>
 
@@ -46,7 +43,7 @@
 								<div class="c1"></div><div class="c2"></div><div class="c3"></div>
 								<div class="inner imgContainer">
 									<img ng-src="{{item.image}}" alt="image"/>
-									<h3 style="font-family:serif;">{{item.name}}</h3><p class="pull-right" ><span class="badge" style="font-family: 'Tangerine', serif;font-size: 24px;">Rs.{{item.price}}</span> </p>
+									<h3 style="font-family:serif;">{{item.name}}</h3><p class="pull-right" ><span class="badge" style="font-family: 'Tangerine', serif;font-size: 24px;">₹ {{item.price}} / {{item.unit}}</span> </p>
 									<br/>
 									<div class="caption">
 										I want this

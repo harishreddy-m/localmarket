@@ -29,6 +29,18 @@ router.get("/orders",function(req,res){
 	});
 });
 
+router.get("/due",function(req,res){
+	Customer.findOne({whois:req.session.user._id}).select("dueamount").exec(function(error,customer){
+		if(error)
+			console.log(error);
+		else{
+			
+				res.send({amount:customer.dueamount});
+		
+		}
+	});
+});
+
 router.post("/buy",function(req,res){
 	var order = new Order(req.body);
 	order.save(function(err){

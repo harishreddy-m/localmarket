@@ -52,6 +52,10 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider
         }).state('home.customer.profile',{
           url:'/profile',
           templateUrl : '/templates/customers-profile.html'
+        }).state('home.customer.bills',{
+          url:'/bills',
+          templateUrl : '/templates/customers-bills.html',
+           controller:'customerController'
         }).state('home.customer.display',{
           url:'/display',
           resolve:{

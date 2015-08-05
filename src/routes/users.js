@@ -1,4 +1,5 @@
 var express = require('express');
+var bcrypt = require('bcrypt-nodejs');
 var router = express.Router();
 var User = require('../models/user');
 var config = require('config');
@@ -27,9 +28,8 @@ else
 
 // AUTHENTICATION
 router.post('/login', function (req, res) {
-
-  User.findOne({username:req.body.username, password:req.body.password}).exec( function (err, user) {
-    if (user) {
+  User.findOne({username:req.body.username}).exec( function (err, user) {
+    if (user &&  bcrypt.compareSync(req.body.password,user.password)) {
       req.session.loggedIn = true;
       req.session.user = user;
       if(user.isCustomer)
@@ -51,10 +51,9 @@ router.post('/login', function (req, res) {
 
 // CREATE USER
 router.post("/create", function (req, res) {
- console.log(req.body);
  var user = new User({
   username:req.body.username,
-  password:req.body.password,
+  password:bcrypt.hashSync(req.body.password),
   email:req.body.email,
   isCustomer:req.body.isCustomer=='on'
 });

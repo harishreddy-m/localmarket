@@ -16,6 +16,13 @@ angular.module('offeringsApp').service('customerService', function($http){
       });
 		return promise
 	}
+	
+	this.getDue = function(){
+		var promise = $http.get('/customer/due').then(function (response) {
+        return response.data.amount;
+      });
+		return promise
+	}
 
 	this.getExistingOrders = function(){
 		var promise = $http.get('/customer/orders').then(function (response) {

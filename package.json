@@ -18,7 +18,8 @@
     "cloudinary":"*",
     "connect-multiparty":"*",
     "csv-parse":"*",
-    "agenda":"*"
+    "agenda":"*",
+    "bcrypt-nodejs":"*"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

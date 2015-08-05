@@ -8,5 +8,9 @@ $scope.save = function(){
 			growl.success("Saved",{ttl:5000});
 	});
 }
+$scope.dueamount='calculating...';
+customerService.getDue().then(function(data){
+$scope.dueamount = data;	
+});
 
 }]);

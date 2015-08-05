@@ -16,7 +16,7 @@ var BilledOrder = require('../models/billedorder');
 agenda.define('generate bills for orders', function(job, done) {
     console.log('Generating bill for ' + new Date());
 
-    Customer.find({}).select("orders").populate("orders").exec(function(error,customers){
+    Customer.find({}).select("orders dueamount").populate("orders").exec(function(error,customers){
         if(error)
             console.log(error);
         else{
@@ -48,6 +48,9 @@ agenda.define('generate bills for orders', function(job, done) {
                 onceorders.save(function(error){if(error)console.log(error);});
                 if(monthlyamount>0)
                 monthlyorders.save(function(error){if(error)console.log(error);});
+                
+                customers[i].dueamount = customers[i].dueamount+dailyamount+monthlyamount+onceamount;
+                customers[i].save(function(error){if(error)console.log(error);});
                  console.log('Generating bill completed at ' + new Date()+"\n-------------------------------\n");
             }
         })
