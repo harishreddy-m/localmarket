@@ -23,5 +23,11 @@ angular.module('offeringsApp').service('vendorService', function($http){
 		return promise;
 	}
 
+this.add = function(vendor){
+		var promise = $http.post('/vendor/new/',vendor).then(function (response) {
+        return response;
+      });
+		return promise;
+	}
 
 });

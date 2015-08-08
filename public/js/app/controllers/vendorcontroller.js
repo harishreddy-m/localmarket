@@ -1,4 +1,4 @@
-angular.module('offeringsApp').controller('VendorController', ['$scope','vendorService','FileUploader','growl','Upload', function($scope,vendorService,FileUploader,growl,Upload) {
+angular.module('offeringsApp').controller('VendorController', ['$scope','vendorService','growl','Upload', function($scope,vendorService,FileUploader,growl,Upload) {
   $scope.pincode = '201014';
   $scope.vendors=[];
   $scope.selections=[]
@@ -99,20 +99,14 @@ $scope.csv=files;
   Add vendor
   */
   $scope.vendor={};
-  $scope.uploader= new FileUploader({url:'/vendor/new',formData:[$scope.vendor]});
   $scope.add = function(){
-    if($scope.uploader.queue.length>0)
-      $scope.uploader.queue[0].upload();
-    else
-      growl.error("Upload a image",{ttl:5000});  
+     vendorService.add($scope.vendor).then(function(response){
+       if(response.status==200)
+       growl.success("Added",{ttl:5000});
+       else
+       growl.error("Failed",{ttl:3000});
+     });
   }
-  $scope.uploader.onCompleteAll = function(fileItem, response, status, headers) {
-    growl.success("Saved!",{ttl: 5000});
-    $scope.uploader.clearQueue();    
-  };
-  $scope.uploader.onErrorItem = function(fileItem, response, status, headers) {
-    growl.error("Failed",{ttl:5000});
-      };
 }]).filter('mapString', function() {
   return function(input) {
     if (!input){

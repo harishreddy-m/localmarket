@@ -10,10 +10,5 @@
 <label for="pincodes">Pincodes</label>
   <textarea class="form-control" rows="3" id="pincodes" ng-model="vendor.pincodes"></textarea>
 
-  <div class="form-group">
-    <label for="vendorlogo">Image</label>
-    <input type="file" id="vendorlogo" nv-file-select uploader="uploader">
-    <p class="help-block">Vendor logo</p>
-  </div>
   <button type="submit" class="btn btn-default" ng-disabled="uploader.isUploading">Save</button>
 </form>

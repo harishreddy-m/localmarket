@@ -40,9 +40,8 @@ router.post('/update',function(req,res){
 router.post('/new',function(req,res){
 	var cats = req.body.categories.split(",");
 	var pins = req.body.pincodes.split(",");
-	var url = req.files.file.path.replace('public',"").replace('\\','/');
 	var add = req.body.address.replace("\n",",");
-	new Vendor({_id:mongoose.Types.ObjectId(),name:req.body.name,email:req.body.email,logo:url,categories:cats,pincodes:pins,phone:req.body.phone,address:add}).save(function(err,vendor){
+	new Vendor({_id:mongoose.Types.ObjectId(),name:req.body.name,email:req.body.email,categories:cats,pincodes:pins,phone:req.body.phone,address:add}).save(function(err,vendor){
 		if(!err){	
 			res.send("success");
 		}else{
