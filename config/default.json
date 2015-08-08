@@ -1,6 +1,6 @@
 {
   "App": {
-  	"title":"Offerings",
+  	"title":"myOfficeAdmin",
     "dbConfig":{"url":"mongodb://harish:qwerty123@ds047800.mongolab.com:47800/offerings"},
     "Port":"3000",
     "imageStorage":{ 

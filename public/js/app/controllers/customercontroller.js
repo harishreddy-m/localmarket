@@ -8,9 +8,21 @@ $scope.save = function(){
 			growl.success("Saved",{ttl:5000});
 	});
 }
+
 $scope.dueamount='calculating...';
+$scope.payamount;
 customerService.getDue().then(function(data){
-$scope.dueamount = data;	
+$scope.dueamount = data;
+$scope.payamount = data;
 });
+
+$scope.pay = function(){
+	customerService.pay($scope.payamount).then(function(data){
+		if(data=="success")
+			growl.success("Transaction initiated",{ttl:5000});
+	});
+}
+
+
 
 }]);

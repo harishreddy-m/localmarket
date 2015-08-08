@@ -19,7 +19,8 @@
     "connect-multiparty":"*",
     "csv-parse":"*",
     "agenda":"*",
-    "bcrypt-nodejs":"*"
+    "bcrypt-nodejs":"*",
+    "crypto":"*"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -14,7 +14,14 @@ angular.module('offeringsApp').service('customerService', function($http){
 		var promise = $http.post('/customer/buy',order).then(function (response) {
         return response.data;
       });
-		return promise
+		return promise;
+	}
+	
+	this.pay = function(amount){
+		var promise = $http.post('/customer/pay',{payamount:amount}).then(function (response) {
+        return response.data;
+      });
+		return promise;
 	}
 	
 	this.getDue = function(){

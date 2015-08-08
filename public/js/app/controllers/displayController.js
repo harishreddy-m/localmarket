@@ -8,17 +8,18 @@ $scope.selected = function(i){
 $scope.items = $scope.categories[i].items;
 }
 
-$scope.quantity='1 litre'
+$scope.quantity='1'
 
 $scope.selectedTab='make';
 
 $scope.add = function(itemselected,freq){
 	$scope.selectedItem = itemselected;
-	action = ngDialog.openConfirm({template: '/templates/popup-'+freq+'.html',
+	var action = ngDialog.openConfirm({template: '/templates/popup-'+freq+'.html',
     scope: $scope});
 
     action.then(function(ok){
     	var order = {};
+    	ok.quantity=parseFloat(ok.quantity);
     	if(freq=='daily'){
     	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity};
     	customerService.buy(order).then(function(){
