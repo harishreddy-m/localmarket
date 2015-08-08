@@ -48,7 +48,7 @@ agenda.define('generate bills for orders', function(job, done) {
                 onceorders.save(function(error){if(error)console.log(error);});
                 if(monthlyamount>0)
                 monthlyorders.save(function(error){if(error)console.log(error);});
-                
+                if(dailyamount>0 || onceamount >0 || monthlyamount >0)
                 customers[i].dueamount = customers[i].dueamount+dailyamount+monthlyamount+onceamount;
                 customers[i].save(function(error){if(error)console.log(error);});
                  console.log('Generating bill completed at ' + new Date()+"\n-------------------------------\n");
