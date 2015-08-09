@@ -21,7 +21,7 @@ $scope.add = function(itemselected,freq){
     	var order = {};
     	ok.quantity=parseFloat(ok.quantity);
     	if(freq=='daily'){
-    	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity};
+    	order = {item:itemselected._id,frequency:freq,quantity:ok.quantity,deliveryweekdays:ok.days};
     	customerService.buy(order).then(function(){
     			growl.success('Added to your orders',{ttl:5000})
     		});

@@ -7,7 +7,8 @@ var OrderSchema   = new Schema({
     quantity:Number,
     orderdate: Date,
     deliverydate: Date,
-    deliveryday:Number
+    deliveryday:Number,
+    deliveryweekdays:{}
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

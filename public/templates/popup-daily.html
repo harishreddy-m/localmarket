@@ -3,6 +3,15 @@
     <h2>Confirm order for {{selectedItem.name}}?</h2><hr/> 
    <label for="quant"> Quantity :</label> <input id="quant" type="text" ng-model="quantity"></input>
     <hr/>
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.mon"/>MonDay &nbsp;
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.tue"/>Tuesday&nbsp;
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.wed"/>Wednesday&nbsp;
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.thu"/>Thursday&nbsp;
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.fri"/>Friday &nbsp;
+    <p>
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.sat"/>Saturday
+    <input id="checkSlave" type="checkbox" ng-model="weekdays.sun"/>Sunday
+    </p><hr/>
     <button ng-click="closeThisDialog()">Cancel</button>
-    <button class="pull-right" ng-click="confirm({quantity:quantity})">Confirm</button>
+    <button class="pull-right" ng-click="confirm({quantity:quantity,days:weekdays})">Confirm</button>
 </div>

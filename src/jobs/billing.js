@@ -27,8 +27,9 @@ agenda.define('generate bills for orders', function(job, done) {
                     var onceorders = new BilledOrder({billingdate : getSimpleDate(today),customer:customers[i]._id,billamount:0});
                     var monthlyorders = new BilledOrder({billingdate : getSimpleDate(today),customer:customers[i]._id,billamount:0});
                     var dailyamount=0,onceamount=0,monthlyamount=0;
+                    var days = ['sun','mon','tue','wed','thu','fri','sat'];
                    for(var j=0;j<customers[i].orders.length;j++){                    
-                    if(customers[i].orders[j].frequency=='daily'){
+                    if(customers[i].orders[j].frequency=='daily' && customers[i].orders[j].deliveryweekdays[days[today.getDay()]] ){
                         dailyorders.orders.push({item:customers[i].orders[j].item.name,quantity:customers[i].orders[j].quantity,price:customers[i].orders[j].item.price});
                         dailyamount=dailyamount+(customers[i].orders[j].quantity*customers[i].orders[j].item.price);
                     }else if(customers[i].orders[j].frequency=='once' && getSimpleDate(customers[i].orders[j].deliverydate)==getSimpleDate(today)){
