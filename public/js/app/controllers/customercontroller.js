@@ -1,6 +1,10 @@
 angular.module('offeringsApp').controller('customerController',['$scope','customerService','growl',function($scope,customerService,growl){
 
-$scope.profile={pincode:'553'};
+$scope.profile={pincode:''};
+
+customerService.getprofile().then(function(profile){
+	$scope.profile=profile;
+})
 
 $scope.save = function(){
 	customerService.save($scope.profile).then(function(data){
@@ -21,7 +25,12 @@ $scope.pay = function(){
 		if(data=="success")
 			growl.success("Transaction initiated",{ttl:5000});
 	});
-}
+};
+$scope.getBill=function(user){
+	customerService.getBill(user).then(function(data){
+
+	});
+};
 
 
 

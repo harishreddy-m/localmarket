@@ -18,6 +18,15 @@ router.post("/profile",function(req,res){
 	});
 });
 
+router.get("/profile",function(req,res){
+	Customer.findOne({whois:req.session.user._id}).select("pincode").exec( function(err,cus) {
+		if(!err)
+			res.send({pincode:cus.pincode});
+			
+	});
+});
+
+
 
 router.post("/paid",function(req,res){
 	Customer.findOne({whois:req.session.user._id}, function(err,customer) {

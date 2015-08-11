@@ -5,6 +5,13 @@ angular.module('offeringsApp').service('customerService', function($http){
       });
 		return promise
 	}
+	
+	this.getprofile = function(){
+		var promise = $http.get('/customer/profile').then(function (response) {
+        return response.data;
+      });
+		return promise
+	}
 
 	this.getItems = function(){
 		return $http.get('/customer/items');
