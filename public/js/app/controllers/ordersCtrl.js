@@ -37,7 +37,8 @@ angular.module('offeringsApp').controller('ordersController',['$scope','growl','
       $scope.gridOptions.columnDefs = [
               {name:'Customer Name',field:'whois.username'},
               {name:'Pincode',field:'pincode'},
-              {name:'Email',field:'whois.email'}
+              {name:'Email',field:'whois.email'},
+              {name:'Due Amount',field:'dueamount'}
         ];
  
      var promise=adminService.getCustomers();
